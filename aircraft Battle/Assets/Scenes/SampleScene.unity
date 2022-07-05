@@ -214,6 +214,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1919185975564171496, guid: cfbba28b2a016e2458b92ea5ca7a12f0, type: 3}
+      propertyPath: speed
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 1919185975564171497, guid: cfbba28b2a016e2458b92ea5ca7a12f0, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -261,6 +265,26 @@ PrefabInstance:
     - target: {fileID: 1919185975564171499, guid: cfbba28b2a016e2458b92ea5ca7a12f0, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1919185975564171503, guid: cfbba28b2a016e2458b92ea5ca7a12f0, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1919185975564171503, guid: cfbba28b2a016e2458b92ea5ca7a12f0, type: 3}
+      propertyPath: m_LinearDrag
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1919185975564171503, guid: cfbba28b2a016e2458b92ea5ca7a12f0, type: 3}
+      propertyPath: m_AngularDrag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8921398796415336041, guid: cfbba28b2a016e2458b92ea5ca7a12f0, type: 3}
+      propertyPath: bulletSpeed
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 8921398796415336041, guid: cfbba28b2a016e2458b92ea5ca7a12f0, type: 3}
+      propertyPath: timeBetweenPlayerShots
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8921398796415336041, guid: cfbba28b2a016e2458b92ea5ca7a12f0, type: 3}
       propertyPath: bulletObjects.Array.data[0]

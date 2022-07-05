@@ -8,6 +8,7 @@ using Vector2 = UnityEngine.Vector2;
 
 public class playerShooting : MonoBehaviour
 {
+    private GameObject bullet;
     [SerializeField] private GameObject[] bulletObjects = new GameObject[2];
     // CurrentBulletType = 0 is for single fire per turret.
     // CurrentBulletType = 1 is double fire per turret.
@@ -40,16 +41,26 @@ public class playerShooting : MonoBehaviour
         {
             if (Time.time > timeReseter)
             {
-                GameObject bullet = Instantiate(bulletObjects[CurrentBulletType], transform.GetChild(2).position,
+                 bullet = Instantiate(bulletObjects[CurrentBulletType], transform.GetChild(2).position,
                     transform.GetChild(2).rotation);
+                 bullet.GetComponent<bulletAction>().destroyBullet(Time.time);
                 bullet.GetComponent<Rigidbody2D>().velocity = Vector2.up*bulletSpeed*Time.deltaTime;
                 timeReseter = Time.time + timeBetweenPlayerShots;
+                
+                
+
             }
+            Invoke("destroyer",5f);
             
             
         }
     }
 
+    public void destroyer()
+    {
+        Destroy(bullet);
+        
+    }
     public void updateDamage(int index)
     {
         if (index == 0) bulletDamage = bulletDamage;
