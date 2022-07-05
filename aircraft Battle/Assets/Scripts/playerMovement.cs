@@ -14,9 +14,9 @@ public class playerMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        PlayerMovement();
     }
 
 
@@ -24,11 +24,11 @@ public class playerMovement : MonoBehaviour
     {
         if (isAlive)
         {
-            
+            float xAxis = Input.GetAxisRaw("Horizontal");
+            rigidBody.velocity = new Vector2(xAxis * speed * Time.deltaTime, 0); 
         }
             
-        float xAxis = Input.GetAxisRaw("Horizontal");
-        rigidBody.velocity = new Vector2(xAxis * speed * Time.time, 0);
+        
 
 
     }
