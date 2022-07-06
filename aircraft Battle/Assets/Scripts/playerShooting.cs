@@ -18,12 +18,13 @@ public class playerShooting : MonoBehaviour
     // CurrentturretForm = 2 is tree turret on plane.
     private int CurrentturretForm = 0;
     [SerializeField] private float bulletSpeed = 100f;
-    private float bulletDamage = 10f;
+    [SerializeField] private float bulletDamage = 1f;
     private float timeReseter;
     [SerializeField] private float timeBetweenPlayerShots = 1f;
     void Start()
     {
         timeReseter = Time.time;
+        
     }
 
     // Update is called once per frame

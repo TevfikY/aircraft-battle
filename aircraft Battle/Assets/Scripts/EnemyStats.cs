@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnemyStats : MonoBehaviour
 {
-    [SerializeField] float hp = 4;
-    [SerializeField] private float damage = 1f;
+     float hp = 4;
+     private float damage = 1;
     [SerializeField] EnemyConfigCreatorCode enemyConfig;
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rigidBodyOfEnemy;

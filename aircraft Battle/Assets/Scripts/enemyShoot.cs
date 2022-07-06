@@ -18,6 +18,7 @@ public class enemyShoot : MonoBehaviour
         
         bulletPerSecondReseter = Time.time;
         enemyDamage = GetComponent<EnemyStats>().GetDamage();
+        Debug.Log("enemy damage is = " + GetComponent<EnemyStats>().GetDamage() );
     }
 
     // Update is called once per frame
@@ -32,10 +33,11 @@ public class enemyShoot : MonoBehaviour
                 {
                     GameObject bullet = Instantiate(enemyBullet, transform.GetChild(0).position,
                         transform.GetChild(0).rotation);
-                    bullet.GetComponent<Rigidbody2D>().velocity = -1*Vector2.up*bulletSpeed*Time.deltaTime;
+                    
                     bulletPerSecondReseter = Time.time + bulletPerSecond;
                     bulletCount++;
                     bullet.GetComponent<EnemyBulletAction>().setInitialTime(Time.time);
+                    bullet.GetComponent<EnemyBulletAction>().setEnemyDamage(enemyDamage);
                 }
             }
             

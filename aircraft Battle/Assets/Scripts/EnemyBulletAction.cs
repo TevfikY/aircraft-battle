@@ -10,22 +10,38 @@ public class EnemyBulletAction : MonoBehaviour
     [SerializeField] private Sprite deathAnimation;
     private bool tookTime = false;
     private float currentTime;
+    [SerializeField] float deadTime =  5f;
+    private bool isDead= false;
+    private Rigidbody2D rb;
+    [SerializeField] private float speed = 300f;
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        if (tookTime)
+        {
+            if (Time.time > currentTime + deadTime)
+            {
+                Destroy(gameObject);
+            }
+        }
+
+        if (!isDead)
+        {
+            rb.velocity = -1 * Vector2.up* speed * Time.deltaTime;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "Player")
         {
+            isDead = true;
             Debug.Log("player GOT HITTTT");
             spriteRenderer.sprite = deathAnimation;
             col.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
@@ -33,6 +49,8 @@ public class EnemyBulletAction : MonoBehaviour
             Invoke("destroyBullet",0.2f);
         }
     }
+    
+    
     
     void destroyBullet()
     {

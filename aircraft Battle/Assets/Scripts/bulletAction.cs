@@ -12,6 +12,7 @@ public class bulletAction : MonoBehaviour
     [SerializeField] float deadTime =  5f;
     private bool isDead = false;
     public float bulletDamage;
+    private bool isAlive = true;
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -29,6 +30,7 @@ public class bulletAction : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+        
         
     }
 
