@@ -77,9 +77,10 @@ GameObject:
   - component: {fileID: 8921398796415336041}
   - component: {fileID: 3857564442389551346}
   - component: {fileID: 893011762499106596}
+  - component: {fileID: 1641278745753367927}
   m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -167,14 +168,14 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDrag: 2
+  m_AngularDrag: 1
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1919185975564171496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,7 +188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce4b998ee1b1d014a9f34a21240c15e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 70
+  speed: 300
 --- !u!114 &8921398796415336041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,9 +202,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  bulletSpeed: 100
+  - {fileID: 2160611896987437505, guid: 6d447b4e68238d043b95839ee5b48edc, type: 3}
+  - {fileID: 5067698437996758563, guid: 27bb44efcd1020b4fa34936eaf22fa73, type: 3}
+  bulletSpeed: 300
+  timeBetweenPlayerShots: 0.2
 --- !u!58 &3857564442389551346
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -211,7 +213,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1919185975564171499}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -250,6 +252,23 @@ PolygonCollider2D:
       - {x: -0.15625, y: 0.3125}
       - {x: -0.15625, y: 0.3125}
       - {x: -1.0779723, y: 8.250528}
+--- !u!114 &1641278745753367927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919185975564171499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9586da89c1ed734459aa8520736fa7f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHP: 12
+  playerDamage: 1
+  firstHeart: {fileID: 0}
+  secondHeart: {fileID: 0}
+  thirdHeart: {fileID: 0}
 --- !u!1 &7645662291136853547
 GameObject:
   m_ObjectHideFlags: 0

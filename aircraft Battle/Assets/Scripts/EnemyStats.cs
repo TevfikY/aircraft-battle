@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class EnemyStats : MonoBehaviour
 {
-    private float hp;
-    private float damage;
+    [SerializeField] float hp = 4;
+    [SerializeField] private float damage = 1f;
     [SerializeField] EnemyConfigCreatorCode enemyConfig;
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rigidBodyOfEnemy;
+    
     void Start()
     {
         updateStats();
@@ -43,5 +44,10 @@ public class EnemyStats : MonoBehaviour
     public void destroyEnemy()
     {
         Destroy(gameObject);
+    }
+
+    public float GetDamage()
+    {
+        return damage;
     }
 }

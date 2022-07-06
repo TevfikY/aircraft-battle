@@ -174,11 +174,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c605bb2b039abb044907fbe11ec4d327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeReseter: 0
-  timeBetweenShots: 3
+  timeBetweenShots: 2
   bulletPerSecond: 0.2
-  bulletPerSecondReseter: 0
   enemyBullet: {fileID: 7971217112430861435, guid: 70f7590c9b9fc394280ac468e0ff5792, type: 3}
+  bulletSpeed: 300
 --- !u!1 &7879527605337818036
 GameObject:
   m_ObjectHideFlags: 0

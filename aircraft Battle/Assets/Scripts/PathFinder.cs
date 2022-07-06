@@ -52,7 +52,8 @@ public class PathFinder : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
+            waypointIndex = 0;
+            transform.position =  waypoints[waypointIndex].position;
         }
         
     }
