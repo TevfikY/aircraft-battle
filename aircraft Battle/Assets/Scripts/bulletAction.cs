@@ -10,6 +10,7 @@ public class bulletAction : MonoBehaviour
     private bool tookTime = false;
     private float currentTime;
     [SerializeField] float deadTime =  5f;
+    private bool isDead = false;
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -19,7 +20,7 @@ public class bulletAction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (tookTime)
+        if (tookTime && !isDead)
         {
             if (Time.time > currentTime + deadTime)
             {
@@ -34,16 +35,23 @@ public class bulletAction : MonoBehaviour
         {
             spriteRenderer.sprite = explodeSprite;
             GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            
             Invoke("destroyBullet",0.2f);
             
         }
         
     }
 
-    public void destroyBullet(float time)
+    
+    public void setInitialTime(float time)
     {
         tookTime = true;
         currentTime = time;
 
+    }
+    
+    void destroyBullet()
+    {
+        Destroy(gameObject);
     }
 }
