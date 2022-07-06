@@ -25,8 +25,8 @@ public class playerMovement : MonoBehaviour
 
     private void Update()
     {
-         move = new Vector2( Input.GetAxisRaw("Horizontal"), 0);
-        
+        move = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+
     }
 
     public void PlayerMovement()
