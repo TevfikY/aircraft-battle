@@ -7,6 +7,7 @@ public class EnemyConfigCreatorCode : ScriptableObject
 {
     [SerializeField] private float enemyHP;
     [SerializeField] private float enemyDamage;
+    [SerializeField] private Sprite deathAnimation;
 
     public float getHP()
     {
@@ -16,5 +17,10 @@ public class EnemyConfigCreatorCode : ScriptableObject
     public float getDamage()
     {
         return enemyDamage;
+    }
+
+    public Sprite getSprite()
+    {
+        return deathAnimation;
     }
 }

@@ -39,18 +39,21 @@ public class playerShooting : MonoBehaviour
         
         if (other.gameObject.tag == "enemy")
         {
+            
             if (Time.time > timeReseter)
             {
+                
                  bullet = Instantiate(bulletObjects[CurrentBulletType], transform.GetChild(2).position,
                     transform.GetChild(2).rotation);
                  bullet.GetComponent<bulletAction>().setInitialTime(Time.time);
                 bullet.GetComponent<Rigidbody2D>().velocity = Vector2.up*bulletSpeed*Time.deltaTime;
                 timeReseter = Time.time + timeBetweenPlayerShots;
-                
-                
+                bullet.GetComponent<bulletAction>().bulletDamage = bulletDamage;
+
+
 
             }
-            Invoke("destroyer",5f);
+            
             
             
         }

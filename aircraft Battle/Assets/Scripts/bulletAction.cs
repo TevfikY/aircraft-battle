@@ -11,6 +11,7 @@ public class bulletAction : MonoBehaviour
     private float currentTime;
     [SerializeField] float deadTime =  5f;
     private bool isDead = false;
+    public float bulletDamage;
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -20,13 +21,15 @@ public class bulletAction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (tookTime && !isDead)
+        
+        if (tookTime)
         {
             if (Time.time > currentTime + deadTime)
             {
                 Destroy(gameObject);
             }
         }
+        
     }
 
     private void OnCollisionEnter2D(Collision2D col)
@@ -35,6 +38,7 @@ public class bulletAction : MonoBehaviour
         {
             spriteRenderer.sprite = explodeSprite;
             GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            col.gameObject.GetComponent<EnemyStats>().hitEnemy(bulletDamage);
             
             Invoke("destroyBullet",0.2f);
             
