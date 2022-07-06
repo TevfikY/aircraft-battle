@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class enemySpawner : MonoBehaviour
 {
-     private waveConfig currentWave;
-     private float timeBetweenWaves = 0f;
+    private waveConfig currentWave;
+    private float timeBetweenWaves = 0f;
 
     [SerializeField] private List<waveConfig> waveConfigs;
     void Start()
