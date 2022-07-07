@@ -11,6 +11,7 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private Image firstHeart;
     [SerializeField] private Image secondHeart;
     [SerializeField] private Image thirdHeart;
+    
     private float maxHP;
     void Start()
     {
@@ -20,7 +21,7 @@ public class PlayerStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Player HP is "+playerHP);
+        
     }
 
     public void playerGetHit(float damage)
@@ -39,7 +40,7 @@ public class PlayerStats : MonoBehaviour
             secondHeart.enabled = true;
             thirdHeart.enabled = false;
         }
-        else if (playerHP / maxHP > (4 / 12f))
+        else if (playerHP / maxHP > (1 / 12f))
         {
             firstHeart.enabled = true;
             secondHeart.enabled = false;
@@ -51,5 +52,10 @@ public class PlayerStats : MonoBehaviour
             secondHeart.enabled = false;
             thirdHeart.enabled = false;
         }
+    }
+
+    public void playerHeal(float hp)
+    {
+        playerHP += hp;
     }
 }

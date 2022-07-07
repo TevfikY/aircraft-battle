@@ -38,6 +38,7 @@ public class bulletAction : MonoBehaviour
     {
         if (col.gameObject.tag == "enemy")
         {
+            
             spriteRenderer.sprite = explodeSprite;
             GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             col.gameObject.GetComponent<EnemyStats>().hitEnemy(bulletDamage);

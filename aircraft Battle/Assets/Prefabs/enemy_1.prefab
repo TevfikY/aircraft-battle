@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 996843289}
   - component: {fileID: -670904538801809196}
   m_Layer: 7
-  m_Name: enemy_0
+  m_Name: enemy_1
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 96626477
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 150c15f135cee1e4fad7f2a3db510a1c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 95d5d679db3754941824e2042bfc7094, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -174,9 +174,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c605bb2b039abb044907fbe11ec4d327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenShots: 1
-  bulletPerSecond: 0.3
-  enemyBullet: {fileID: 7971217112430861435, guid: 70f7590c9b9fc394280ac468e0ff5792, type: 3}
+  timeBetweenShots: 2
+  bulletPerSecond: 0.2
+  enemyBullet: {fileID: 3441797099502251090, guid: 34c23e52688ee704c91ad44718d307e8, type: 3}
   bulletSpeed: 300
 --- !u!1 &7879527605337818036
 GameObject:

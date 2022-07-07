@@ -18,7 +18,7 @@ public class enemyShoot : MonoBehaviour
         
         bulletPerSecondReseter = Time.time;
         enemyDamage = GetComponent<EnemyStats>().GetDamage();
-        Debug.Log("enemy damage is = " + GetComponent<EnemyStats>().GetDamage() );
+        
     }
 
     // Update is called once per frame

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 996843289}
   - component: {fileID: -670904538801809196}
   m_Layer: 7
-  m_Name: enemy_0
+  m_Name: enemy_3
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,12 +79,12 @@ SpriteRenderer:
   m_SortingLayerID: 96626477
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 150c15f135cee1e4fad7f2a3db510a1c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f0633a5072107a143ac6e84f4ebeaece, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.32, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -124,18 +124,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.000000029802322, y: -0.10360307}
+  m_Offset: {x: -0.0016407222, y: 0.036294237}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.76677424, y: 0.3695761}
+  m_Size: {x: 0.23932666, y: 0.089781374}
   m_EdgeRadius: 0
 --- !u!114 &6651517773676426112
 MonoBehaviour:
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d1ec4ec647969b4a9c7dc85298e0579, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyConfig: {fileID: 11400000, guid: 0cad234036822c542a58d797f66024fb, type: 2}
+  enemyConfig: {fileID: 11400000, guid: 1ed171c046473e64b99cda56bcf5be3b, type: 2}
 --- !u!114 &996843289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 310410127053103322}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 66090ac1309cdd649a90c494066fc8b8, type: 3}
   m_Name: 
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 310410127053103322}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c605bb2b039abb044907fbe11ec4d327, type: 3}
   m_Name: 
