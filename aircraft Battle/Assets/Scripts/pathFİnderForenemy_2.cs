@@ -6,13 +6,14 @@ public class pathFİnderForenemy_2 : MonoBehaviour
 {
     
     private waveConfig waveConfig;
-    private List<Transform> waypoints;
+    private List<Transform> waypoints = new List<Transform>();
     private int waypointIndex = 0;
     private enemySpawner _enemySpawner;
 
     private void Awake()
     {
         _enemySpawner = FindObjectOfType<enemySpawner>();
+        
     }
 
     void Start()

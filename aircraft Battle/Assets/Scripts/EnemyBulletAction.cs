@@ -42,7 +42,7 @@ public class EnemyBulletAction : MonoBehaviour
         if (col.gameObject.tag == "Player")
         {
             isDead = true;
-            Debug.Log("player GOT HITTTT");
+            
             spriteRenderer.sprite = deathAnimation;
             col.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             col.gameObject.GetComponent<PlayerStats>().playerGetHit(enemyDamage);
