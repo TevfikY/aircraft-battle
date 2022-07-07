@@ -9,14 +9,27 @@ public class levelManagement : MonoBehaviour
     public GameObject[] tilePrefabs;
     public float zSpawn = 0;
     public Transform playerTransform;
-
-
+    private int usingTilemap;
+    
 
     private void Update()
     {
         if (playerTransform.position.y > zSpawn)
         {
-            spawnTile(0);
+            if (zSpawn < 50)
+            {
+                usingTilemap = Random.Range(0, 4);
+                spawnTile(usingTilemap);
+            }
+            else if (zSpawn == 50)
+            {
+                spawnTile(4);
+            }
+            else if (zSpawn < 100)
+            {
+                usingTilemap = Random.Range(5, 8);
+                spawnTile(usingTilemap);
+            }
         }
     }
 
