@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: wave_2
   m_EditorClassIdentifier: 
   enemyPrefabs:
-  - {fileID: 3255109133688454093, guid: 12e1867c4a26a224b97cca221ac36a17, type: 3}
+  - {fileID: 7160099949942978545, guid: adf07cee7d631994d9c0bb24afe27976, type: 3}
   pathPrefab: {fileID: 5531744322103938334, guid: 4bec02cbaba480c43880e09b9fe15e65, type: 3}
   moveSpeed: 1.5
