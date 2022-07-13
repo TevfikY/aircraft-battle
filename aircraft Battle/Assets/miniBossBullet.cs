@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBulletAction : MonoBehaviour
+public class miniBossBullet : MonoBehaviour
 {
     private float enemyDamage;
     private SpriteRenderer spriteRenderer;
@@ -13,7 +13,7 @@ public class EnemyBulletAction : MonoBehaviour
     [SerializeField] float deadTime =  5f;
     private bool isDead= false;
     private Rigidbody2D rb;
-    [SerializeField] private float speed = 300f;
+    [SerializeField] private float speed = 5f;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -33,14 +33,15 @@ public class EnemyBulletAction : MonoBehaviour
 
         if (!isDead)
         {
-            bulletMove();
+           // bulletMove();
+           
         }
     }
-
     private void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "Player")
         {
+            Debug.Log("hiiit");
             isDead = true;
             
             spriteRenderer.sprite = deathAnimation;
@@ -50,9 +51,11 @@ public class EnemyBulletAction : MonoBehaviour
         }
     }
 
+  
+
     public virtual void bulletMove()
     {
-        rb.velocity = -1 * Vector2.up* speed * Time.deltaTime;
+        
     }
     
     

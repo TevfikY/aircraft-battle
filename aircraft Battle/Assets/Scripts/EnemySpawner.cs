@@ -16,7 +16,7 @@ public class enemySpawner : MonoBehaviour
        void Start()
        {
            StartCoroutine(spawn());
-           Debug.Log(waveConfigs2 );
+           
        }
    
       
