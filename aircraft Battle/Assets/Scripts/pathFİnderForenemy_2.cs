@@ -1,21 +1,19 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class PathFinder : MonoBehaviour
+public class pathFİnderForenemy_2 : MonoBehaviour
 {
     
-    
     private waveConfig waveConfig;
-    private List<Transform> waypoints;
+    private List<Transform> waypoints = new List<Transform>();
     private int waypointIndex = 0;
     private enemySpawner _enemySpawner;
 
     private void Awake()
     {
         _enemySpawner = FindObjectOfType<enemySpawner>();
+        
     }
 
     void Start()
@@ -42,9 +40,9 @@ public class PathFinder : MonoBehaviour
             float speed = waveConfig.GetMoveSpeed() ;
             
             
-                transform.position = Vector2.MoveTowards(transform.position,target,speed* Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position,target,speed* Time.deltaTime);
             
-             if ((Vector2)transform.position == (Vector2)target)
+            if ((Vector2)transform.position == (Vector2)target)
             {
                 waypointIndex++;
                 
@@ -52,7 +50,8 @@ public class PathFinder : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
+            waypointIndex = 1;
+            
         }
         
     }

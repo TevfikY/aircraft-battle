@@ -12,6 +12,7 @@ public class bulletAction : MonoBehaviour
     [SerializeField] float deadTime =  5f;
     private bool isDead = false;
     public float bulletDamage;
+    private bool isAlive = true;
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -30,12 +31,14 @@ public class bulletAction : MonoBehaviour
             }
         }
         
+        
     }
 
     private void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "enemy")
         {
+            
             spriteRenderer.sprite = explodeSprite;
             GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             col.gameObject.GetComponent<EnemyStats>().hitEnemy(bulletDamage);

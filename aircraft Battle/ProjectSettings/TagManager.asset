@@ -15,8 +15,8 @@ TagManager:
   - Player
   - enemy
   - PalyerCollider
-  - 
-  - 
+  - EnemyBullet
+  - turret
   - 
   - 
   - 

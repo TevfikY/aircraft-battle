@@ -4,16 +4,21 @@ using UnityEngine;
 
 public class EnemyStats : MonoBehaviour
 {
-    private float hp;
-    private float damage;
+     float hp = 4;
+     private float damage = 1;
     [SerializeField] EnemyConfigCreatorCode enemyConfig;
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rigidBodyOfEnemy;
+    private Sprite enemySprite;
+    private bool isDead = false;
+    
+    
     void Start()
     {
         updateStats();
         spriteRenderer = GetComponent<SpriteRenderer>();
         rigidBodyOfEnemy = GetComponent<Rigidbody2D>();
+        enemySprite = GetComponent<SpriteRenderer>().sprite;
     }
 
     // Update is called once per frame
@@ -30,13 +35,21 @@ public class EnemyStats : MonoBehaviour
 
     public void hitEnemy(float damage)
     {
+        
+        
         hp = hp - damage;
         
-        if (hp <= 0)
+        
+        if (hp <= 0 && !isDead)
         {
+            isDead = true;
+            
+            FindObjectOfType<enemySpawner>().decreaseEnemyCountByOne();
             spriteRenderer.sprite = enemyConfig.getSprite();
             rigidBodyOfEnemy.velocity = Vector2.zero;
+            
             Invoke("destroyEnemy",0.2f);
+            
         }
     }
 
@@ -44,4 +57,12 @@ public class EnemyStats : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+    public float GetDamage()
+    {
+        return damage;
+    }
+
+   
+    
 }
