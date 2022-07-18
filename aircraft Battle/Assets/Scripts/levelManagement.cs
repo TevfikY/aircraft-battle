@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class LevelManagement : MonoBehaviour
+public class levelManagement : MonoBehaviour
 {
     public GameObject[] tilePrefabs;
     public List<GameObject> gridList;
@@ -60,4 +60,3 @@ public class LevelManagement : MonoBehaviour
         }
     }
 }
-
