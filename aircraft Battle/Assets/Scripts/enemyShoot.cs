@@ -54,9 +54,5 @@ public class enemyShoot : MonoBehaviour
         
     }
 
-    IEnumerator Shoot()
-    {
-        Debug.Log("shoot");
-        yield return new WaitForSecondsRealtime(0.2f);
-    }
+    
 }

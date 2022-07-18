@@ -10,6 +10,7 @@ public class EnemyStats : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rigidBodyOfEnemy;
     private Sprite enemySprite;
+    private bool isDead = false;
     
     
     void Start()
@@ -39,16 +40,16 @@ public class EnemyStats : MonoBehaviour
         hp = hp - damage;
         
         
-        if (hp <= 0)
+        if (hp <= 0 && !isDead)
         {
-            spriteRenderer.sprite = enemyConfig.getSprite();
-            if (GetComponentInChildren<SpriteRenderer>().sprite != null)
-            {
-               // GetComponentInChildren<SpriteRenderer>().sprite = 
-            }
-            rigidBodyOfEnemy.velocity = Vector2.zero;
-            Invoke("destroyEnemy",0.2f);
+            isDead = true;
+            Debug.Log("dead");
             FindObjectOfType<enemySpawner>().decreaseEnemyCountByOne();
+            spriteRenderer.sprite = enemyConfig.getSprite();
+            rigidBodyOfEnemy.velocity = Vector2.zero;
+            
+            Invoke("destroyEnemy",0.2f);
+            
         }
     }
 

@@ -33,19 +33,23 @@ public class enemySpawner : MonoBehaviour
                waveConfigs.Remove(waveConfigs[firstRandom]);
                int secondRandom = Random.Range(0, waveConfigs.Count);
                selectedWaves.Add(waveConfigs[secondRandom]);
+               enemyCount += selectedWaves[0].getEnemyCount();
+               enemyCount += selectedWaves[1].getEnemyCount();
                
                foreach (waveConfig wave in selectedWaves)
                {
-
+                   
                    currentWave = wave;
                    for (int i = 0; i < currentWave.getEnemyCount(); i++)
                    {
                        GameObject enemy = Instantiate(currentWave.GetEnemyPrefab(i),
                            currentWave.getStartingPoint().position, Quaternion.identity);
-                       enemyCount++;
+                        
                        
                        yield return new WaitForSeconds(timeBetweenEnemeies);
                    }
+
+                   Debug.Log(enemyCount);
 
                    yield return new WaitForSeconds(timeBetweenWaves);
                }
@@ -70,6 +74,7 @@ public class enemySpawner : MonoBehaviour
                    yield return new WaitForSeconds(timeBetweenWaves);
                }
            }
+           /*
            else if (phaze == 2)
            {
                int firstRandom = Random.Range(0, waveConfigs.Count);
@@ -117,8 +122,10 @@ public class enemySpawner : MonoBehaviour
                    yield return new WaitForSeconds(timeBetweenWaves);
                }
            }
+           */
 
        }
+       
        
    
        public waveConfig GetCurrentWave()
@@ -132,7 +139,8 @@ public class enemySpawner : MonoBehaviour
 
        public void decreaseEnemyCountByOne()
        {
-           enemyCount--;
+           --enemyCount;
+           Debug.Log("decreased " + enemyCount);
            if (enemyCount <= 0)
            {
                phaze++;
