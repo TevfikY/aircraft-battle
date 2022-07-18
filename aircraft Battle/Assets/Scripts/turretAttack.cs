@@ -19,7 +19,7 @@ public class turretAttack : MonoBehaviour
     void Start()
     {
         player = FindObjectOfType<playerMovement>().gameObject;
-        timeReseter = Time.time + 1f;
+        timeReseter = Time.time + 3f;
         enemyDamage = 2f;
         bulletPerSecondReseter = Time.time;
     }

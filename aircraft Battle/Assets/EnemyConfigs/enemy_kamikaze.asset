@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8fd9bc79dad4194baf9514b54649744, type: 3}
+  m_Name: enemy_kamikaze
+  m_EditorClassIdentifier: 
+  enemyHP: 1
+  enemyDamage: 0
+  deathAnimation: {fileID: -330718904, guid: dc37c5c2724cc0649a787df38b3ccd90, type: 3}
