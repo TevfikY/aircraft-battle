@@ -44,7 +44,7 @@ public class EnemyStats : MonoBehaviour
         {
             isDead = true;
             
-            FindObjectOfType<enemySpawner>().decreaseEnemyCountByOne();
+            FindObjectOfType<EnemySpawner>().decreaseEnemyCountByOne();
             spriteRenderer.sprite = enemyConfig.getSprite();
             rigidBodyOfEnemy.velocity = Vector2.zero;
             

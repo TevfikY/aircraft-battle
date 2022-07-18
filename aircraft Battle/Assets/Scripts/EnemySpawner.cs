@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemySpawner : MonoBehaviour
+public class EnemySpawner : MonoBehaviour
 {
     private waveConfig currentWave;
         private float timeBetweenWaves = 0f;

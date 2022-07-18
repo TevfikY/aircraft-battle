@@ -11,16 +11,16 @@ public class PathFinder : MonoBehaviour
     private waveConfig waveConfig;
     private List<Transform> waypoints;
     private int waypointIndex = 0;
-    private enemySpawner _enemySpawner;
+    private EnemySpawner _EnemySpawner;
 
     private void Awake()
     {
-        _enemySpawner = FindObjectOfType<enemySpawner>();
+        _EnemySpawner = FindObjectOfType<EnemySpawner>();
     }
 
     void Start()
     {
-        waveConfig = _enemySpawner.GetCurrentWave();
+        waveConfig = _EnemySpawner.GetCurrentWave();
         waypoints = waveConfig.GetWayPoints();
         transform.position = waypoints[waypointIndex].position;
     }
