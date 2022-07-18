@@ -13,6 +13,6 @@ public class wavePositionOnScene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position =  new Vector3(0,cameraPos.position.y-3,0);
+        transform.position =  new Vector3(5,cameraPos.position.y-3,0);
     }
 }
