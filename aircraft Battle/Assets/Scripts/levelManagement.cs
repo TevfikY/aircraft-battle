@@ -1,42 +1,63 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class levelManagement : MonoBehaviour
+public class LevelManagement : MonoBehaviour
 {
     public GameObject[] tilePrefabs;
-    public float zSpawn = 0;
+    public List<GameObject> gridList;
+    public float levelTracker = 0;
     public Transform playerTransform;
-    private int usingTilemap;
-    
+    private int currentGrid;
+
+    private void Start()
+    {
+        /*GameObject startingGrid = Instantiate(tilePrefabs[16]);
+        startingGrid.transform.position = new Vector2(0, 0);*/
+        gridList.Add(GameObject.Find("StartingGrid"));
+    }
 
     private void Update()
     {
-        if (playerTransform.position.y > zSpawn)
+        if (playerTransform.position.y > levelTracker)
         {
-            if (zSpawn < 50)
+            if (levelTracker % 200 < 50)
             {
-                usingTilemap = Random.Range(0, 4);
-                spawnTile(usingTilemap);
+                currentGrid = Random.Range(0, 4);
+                spawnGrid(currentGrid);
             }
-            else if (zSpawn == 50)
+            else if (levelTracker % 200 < 100)
             {
-                spawnTile(4);
+                currentGrid = Random.Range(4, 8);
+                spawnGrid(currentGrid);
             }
-            else if (zSpawn < 100)
+            else if (levelTracker % 200 < 150)
             {
-                usingTilemap = Random.Range(5, 8);
-                spawnTile(usingTilemap);
+                currentGrid = Random.Range(8, 12);
+                spawnGrid(currentGrid);
+            }
+            else if (levelTracker % 200 < 200)
+            {
+                currentGrid = Random.Range(12, 16);
+                spawnGrid(currentGrid);
             }
         }
     }
 
-    public void spawnTile(int tileIndex)
+    public void spawnGrid(int tileIndex)
     {
-        GameObject a = Instantiate(tilePrefabs[tileIndex]);
-        a.transform.position = new Vector2(0, 10 + zSpawn);
-        zSpawn += 10;
+        GameObject go = Instantiate(tilePrefabs[tileIndex]);
+        go.transform.position = new Vector2(0, levelTracker + 10);
+        levelTracker += 10;
+        gridList.Add(go);
+        if (playerTransform.position.y > gridList[0].transform.position.y + 10)
+        {
+            Destroy(gridList[0]);
+            gridList.RemoveAt(0);
+        }
     }
 }
+
