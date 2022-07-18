@@ -771,6 +771,10 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 8921398796415336041, guid: cfbba28b2a016e2458b92ea5ca7a12f0, type: 3}
+      propertyPath: bulletDamage
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfbba28b2a016e2458b92ea5ca7a12f0, type: 3}
 --- !u!1001 &4583961836974523298

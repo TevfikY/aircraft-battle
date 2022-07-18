@@ -43,7 +43,7 @@ public class EnemyStats : MonoBehaviour
         if (hp <= 0 && !isDead)
         {
             isDead = true;
-            Debug.Log("dead");
+            
             FindObjectOfType<enemySpawner>().decreaseEnemyCountByOne();
             spriteRenderer.sprite = enemyConfig.getSprite();
             rigidBodyOfEnemy.velocity = Vector2.zero;

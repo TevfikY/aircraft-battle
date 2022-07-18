@@ -41,7 +41,7 @@ public class miniBossBullet : MonoBehaviour
     {
         if (col.gameObject.tag == "Player")
         {
-            Debug.Log("hiiit");
+            
             isDead = true;
             
             spriteRenderer.sprite = deathAnimation;

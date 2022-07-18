@@ -11,6 +11,7 @@ public class enemySpawner : MonoBehaviour
        [SerializeField] private List<waveConfig> waveConfigs2;
        [SerializeField] private List<waveConfig> waveConfigs3;
        [SerializeField] private List<waveConfig> waveConfigs4;
+       private List<waveConfig> deletedWaves= new List<waveConfig>();
        private int phaze = 0;
        public bool allEnemiesAlive = true;
        private List<waveConfig> selectedWaves = new List<waveConfig>();
@@ -25,17 +26,23 @@ public class enemySpawner : MonoBehaviour
        IEnumerator spawn()
        {
            if (phaze == 0 )
-           {
+           {   
+               selectedWaves.Clear();
                int firstRandom = Random.Range(0, waveConfigs.Count);
 
-               
+               deletedWaves.Add(waveConfigs[firstRandom]);
                selectedWaves.Add(waveConfigs[firstRandom]);
+               
                waveConfigs.Remove(waveConfigs[firstRandom]);
                int secondRandom = Random.Range(0, waveConfigs.Count);
                selectedWaves.Add(waveConfigs[secondRandom]);
                enemyCount += selectedWaves[0].getEnemyCount();
                enemyCount += selectedWaves[1].getEnemyCount();
-               
+               foreach (waveConfig wave in deletedWaves)
+               {
+                   waveConfigs.Add(wave);
+               }
+               deletedWaves.Clear();
                foreach (waveConfig wave in selectedWaves)
                {
                    
@@ -49,7 +56,7 @@ public class enemySpawner : MonoBehaviour
                        yield return new WaitForSeconds(timeBetweenEnemeies);
                    }
 
-                   Debug.Log(enemyCount);
+                   
 
                    yield return new WaitForSeconds(timeBetweenWaves);
                }
@@ -68,32 +75,6 @@ public class enemySpawner : MonoBehaviour
                            currentWave.getStartingPoint().position, Quaternion.identity);
                        enemyCount++;
                        
-                       yield return new WaitForSeconds(timeBetweenEnemeies);
-                   }
-
-                   yield return new WaitForSeconds(timeBetweenWaves);
-               }
-           }
-           /*
-           else if (phaze == 2)
-           {
-               int firstRandom = Random.Range(0, waveConfigs.Count);
-
-               
-               selectedWaves.Add(waveConfigs[firstRandom]);
-               waveConfigs.Remove(waveConfigs[firstRandom]);
-               int secondRandom = Random.Range(0, waveConfigs.Count);
-               selectedWaves.Add(waveConfigs[secondRandom]);
-               
-               foreach (waveConfig wave in selectedWaves)
-               {
-
-                   currentWave = wave;
-                   for (int i = 0; i < currentWave.getEnemyCount(); i++)
-                   {
-                       GameObject enemy = Instantiate(currentWave.GetEnemyPrefab(i),
-                           currentWave.getStartingPoint().position, Quaternion.identity);
-                       enemyCount++;
                        
                        yield return new WaitForSeconds(timeBetweenEnemeies);
                    }
@@ -101,11 +82,51 @@ public class enemySpawner : MonoBehaviour
                    yield return new WaitForSeconds(timeBetweenWaves);
                }
            }
+           
+           else if (phaze == 2)
+           {
+               
+               selectedWaves.Clear();
+               int firstRandom = Random.Range(0, waveConfigs3.Count);
+                
+               
+               selectedWaves.Add(waveConfigs3[firstRandom]);
+               deletedWaves.Add(waveConfigs3[firstRandom]);
+               waveConfigs.Remove(waveConfigs3[firstRandom]);
+               int secondRandom = Random.Range(0, waveConfigs3.Count);
+               selectedWaves.Add(waveConfigs3[secondRandom]);
+               enemyCount += selectedWaves[0].getEnemyCount();
+               enemyCount += selectedWaves[1].getEnemyCount();
+               foreach (waveConfig wave in deletedWaves)
+               {
+                   waveConfigs.Add(wave);
+               }
+               deletedWaves.Clear();
+               foreach (waveConfig wave in selectedWaves)
+               {
+                   
+                   currentWave = wave;
+                   for (int i = 0; i < currentWave.getEnemyCount(); i++)
+                   {
+                       GameObject enemy = Instantiate(currentWave.GetEnemyPrefab(i),
+                           currentWave.getStartingPoint().position, Quaternion.identity);
+                        
+                       
+                       yield return new WaitForSeconds(timeBetweenEnemeies);
+                   }
+
+                   
+
+                   yield return new WaitForSeconds(timeBetweenWaves);
+               }
+           }
+           
            else if (phaze == 3)
            {
+               
                selectedWaves.Clear();
-               int firstRandom = Random.Range(0, waveConfigs2.Count);
-               selectedWaves.Add(waveConfigs2[0]);
+               int firstRandom = Random.Range(0, waveConfigs4.Count);
+               selectedWaves.Add(waveConfigs4[0]);
                foreach (waveConfig wave in selectedWaves)
                {
 
@@ -116,13 +137,14 @@ public class enemySpawner : MonoBehaviour
                            currentWave.getStartingPoint().position, Quaternion.identity);
                        enemyCount++;
                        
+                       
                        yield return new WaitForSeconds(timeBetweenEnemeies);
                    }
 
                    yield return new WaitForSeconds(timeBetweenWaves);
                }
            }
-           */
+           
 
        }
        
@@ -140,10 +162,13 @@ public class enemySpawner : MonoBehaviour
        public void decreaseEnemyCountByOne()
        {
            --enemyCount;
-           Debug.Log("decreased " + enemyCount);
+           Debug.Log("enemy count is " + enemyCount);
            if (enemyCount <= 0)
            {
-               phaze++;
+               
+                   ++phaze;
+               Debug.Log("PHAZZE "+phaze);
+               
                if (phaze == 4) phaze = 0;
                StartCoroutine(spawn());
            }
