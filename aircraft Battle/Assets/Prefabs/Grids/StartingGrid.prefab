@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8733048053693673818}
   - component: {fileID: 4727816980374987790}
+  - component: {fileID: 5320025986273123816}
   m_Layer: 0
   m_Name: StartingGrid
   m_TagString: Untagged
@@ -45,6 +46,27 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
+--- !u!50 &5320025986273123816
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4333440852885740775}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &8625482166086904025
 GameObject:
   m_ObjectHideFlags: 0

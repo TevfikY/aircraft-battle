@@ -6,23 +6,30 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class LevelManagement : MonoBehaviour
-{
-    public GameObject[] tilePrefabs;
-    public List<GameObject> gridList;
-    public float levelTracker = 0;
-    public Transform playerTransform;
+{ 
+    [SerializeField] private float backgroundSpeed = 2f;
     private int currentGrid;
+    public float levelTracker = 0;
+    private float spawnTracker = 0;
+    public GameObject[] tilePrefabs;
+    private GameObject go;
+    public List<GameObject> gridList;
+    public Transform playerTransform;
+    private Rigidbody2D tilerb;
+
 
     private void Start()
     {
-        /*GameObject startingGrid = Instantiate(tilePrefabs[16]);
-        startingGrid.transform.position = new Vector2(0, 0);*/
-        gridList.Add(GameObject.Find("StartingGrid"));
+        go = GameObject.Find("StartingGrid");
+        tilerb = go.GetComponent<Rigidbody2D>();
+        tilerb.velocity = new Vector2(0, -backgroundSpeed);
+        gridList.Add(go);
     }
 
     private void Update()
     {
-        if (playerTransform.position.y > levelTracker)
+        tilerb.velocity = new Vector2(0, -backgroundSpeed);
+        if ((playerTransform.position.y > gridList[0].transform.position.y) && (spawnTracker == 0))
         {
             if (levelTracker % 200 < 50)
             {
@@ -45,19 +52,27 @@ public class LevelManagement : MonoBehaviour
                 spawnGrid(currentGrid);
             }
         }
-    }
-
-    public void spawnGrid(int tileIndex)
-    {
-        GameObject go = Instantiate(tilePrefabs[tileIndex]);
-        go.transform.position = new Vector2(0, levelTracker + 10);
-        levelTracker += 10;
-        gridList.Add(go);
-        if (playerTransform.position.y > gridList[0].transform.position.y + 10)
+        if (gridList[0].transform.position.y < -10)
         {
-            Destroy(gridList[0]);
-            gridList.RemoveAt(0);
+            destroyGrid(gridList[0]);
         }
     }
-}
 
+    private void spawnGrid(int tileIndex)
+    {
+        go = Instantiate(tilePrefabs[tileIndex]);
+        go.transform.position = new Vector2(0, 9.8f);
+        gridList.Add(go);
+        tilerb = go.GetComponent<Rigidbody2D>();
+        tilerb.velocity = new Vector2(0, -backgroundSpeed);
+        spawnTracker += 10;
+        levelTracker += 10;
+    }
+
+    void destroyGrid(GameObject destroyableObject)
+    {
+        Destroy(destroyableObject);
+        gridList.RemoveAt(0);
+        spawnTracker -= 10;
+    }
+}
