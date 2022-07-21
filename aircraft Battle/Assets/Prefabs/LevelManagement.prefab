@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4862900261206765479
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 841411314631634170}
+  - component: {fileID: 6210508390878755340}
+  m_Layer: 0
+  m_Name: LevelManagement
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &841411314631634170
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4862900261206765479}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.25, y: -0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6210508390878755340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4862900261206765479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 357d4efeaaaa5b442a777b9d54fb779e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backgroundSpeed: 5
+  speedUp: 0.1
+  maxSpeed: 10
+  levelTracker: 0
+  tilePrefabs:
+  - {fileID: 8461631550382158716, guid: 96d57b5b8aa43b541b8b1e28f410431a, type: 3}
+  - {fileID: 7933873653767782373, guid: 9faf74654dbc99a42a2e14fcca73ef33, type: 3}
+  - {fileID: 682909203919468464, guid: 90fd991676e79a64bb118dab5e519289, type: 3}
+  - {fileID: 5231583474052280883, guid: 960beb680a408ba42be1c3885ec6528e, type: 3}
+  - {fileID: 6931968097031683319, guid: 562bfdca9710b414ea5380c90c66aa1a, type: 3}
+  - {fileID: 8358802588172851707, guid: 870c049164cae6f4ba1907dc3fa5351e, type: 3}
+  - {fileID: 9062621540874381316, guid: 078939e42b436054a9c50523a8248c77, type: 3}
+  - {fileID: 758793029096847716, guid: 46ad775e1a7eb18419c65cdfe3126dae, type: 3}
+  - {fileID: 757021870592302455, guid: 97e5ee26d084afc45af3fd26362b87dc, type: 3}
+  - {fileID: 965208343732232692, guid: 0c8f7557dfc349944a9f9e4b9caa196d, type: 3}
+  - {fileID: 8084889644046920674, guid: 34352254d10309745b11f2249dafc708, type: 3}
+  - {fileID: 719789481676755767, guid: 6798c8c92acd253429e52775d2de50d4, type: 3}
+  - {fileID: 2512575472475370821, guid: fe5191f0f4d7d5a4993ca2275cce2537, type: 3}
+  - {fileID: 4801214648918022174, guid: b760edc0478b47d469434805625cc120, type: 3}
+  - {fileID: 5554132267383091048, guid: be449dc380deca046ae8c3e20dc195cc, type: 3}
+  - {fileID: 8190007261137988631, guid: fc7b9717b5dd7f348919362e5dde883c, type: 3}
+  gridList: []
+  playerTransform: {fileID: 0}
