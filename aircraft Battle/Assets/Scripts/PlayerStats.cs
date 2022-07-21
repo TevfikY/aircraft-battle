@@ -58,4 +58,14 @@ public class PlayerStats : MonoBehaviour
     {
         playerHP += hp;
     }
+
+    public void updatePlayerDamage(float damage)
+    {
+        playerDamage += damage;
+    }
+
+    public float getDamage()
+    {
+        return playerDamage;
+    }
 }

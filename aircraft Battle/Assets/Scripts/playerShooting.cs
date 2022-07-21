@@ -17,14 +17,15 @@ public class playerShooting : MonoBehaviour
     // CurrentturretForm = 1 is two turret on plane.
     // CurrentturretForm = 2 is tree turret on plane.
     private int CurrentturretForm = 0;
-    [SerializeField] private float bulletSpeed = 100f;
+    private float bulletSpeed = 600f;
     [SerializeField] private float bulletDamage = 1f;
     private float timeReseter;
     [SerializeField] private float timeBetweenPlayerShots = 1f;
     void Start()
     {
         timeReseter = Time.time;
-        
+        bulletDamage = GetComponent<PlayerStats>().getDamage();
+
     }
 
     // Update is called once per frame

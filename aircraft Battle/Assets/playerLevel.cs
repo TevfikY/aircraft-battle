@@ -12,7 +12,7 @@ public class playerLevel : MonoBehaviour
     [SerializeField] private Text lvlText;
     [SerializeField] GameObject upgradeMenu;
     private List<int> UpgradeList = new List<int>(); 
-    private List<int> UpgradesOnScreen = new List<int>(); 
+    
     // 0 is dmg Boost
     // 1 is HP boost
     // 2 double bullets
@@ -51,23 +51,58 @@ public class playerLevel : MonoBehaviour
         expBar.fillAmount = playerCurrentExp / maxExp;
     }
 
+    public void closeMenu()
+    {
+        //upgradeMenu.SetActive(false);
+        FindObjectOfType<lvltestempty>().gameObject.SetActive(false);
+    }
     private void openUpgradeMenu()
     {
         upgradeMenu.SetActive(true);
         Time.timeScale = 0;
-        firstUpgrade = Random.Range(0, UpgradeList.Count);
-        UpgradesOnScreen.Add(firstUpgrade);
-        UpgradeList.Remove(firstUpgrade);
-        secondUpgrade = Random.Range(0, UpgradeList.Count);
-        UpgradesOnScreen.Add(secondUpgrade);
-        UpgradeList.Remove(secondUpgrade);    
-        thirdUpgrade = Random.Range(0, UpgradeList.Count);
-        UpgradesOnScreen.Add(thirdUpgrade);
-        UpgradeList.Remove(thirdUpgrade); 
+        firstUpgrade = UpgradeList[Random.Range(0, UpgradeList.Count)];
+        
+        UpgradeList.Remove(UpgradeList[firstUpgrade]);
+        secondUpgrade = UpgradeList[Random.Range(0, UpgradeList.Count)];
+        
+        UpgradeList.Remove(UpgradeList[secondUpgrade]);    
+        thirdUpgrade = UpgradeList[Random.Range(0, UpgradeList.Count)];
+        
+        UpgradeList.Remove(UpgradeList[thirdUpgrade]);
+        updateButtons();
+    }
+
+    void updateButtons()
+    {
+        firstButton.GetComponentInChildren<Text>().text = getUpgrade(firstUpgrade);
+        secondButton.GetComponentInChildren<Text>().text = getUpgrade(secondUpgrade);
+        thirdButton.GetComponentInChildren<Text>().text = getUpgrade(thirdUpgrade);
+    }
+    
+    string getUpgrade(int up)
+    {
+        int upgrade = up;
+        string textOnButton = " ";
+        switch (upgrade)
+        {
+            case 0: 
+                textOnButton = "dmg Boost"; break;
+            case 1: 
+                textOnButton = "hp regen"; break;
+            case 2: 
+                textOnButton = "Dubble Bullets"; break;
+            case 3: 
+                textOnButton = "max hp boost"; break;
+                
+           
+        }
+
+        return textOnButton;
     }
 
     private void updateUpgradeList()
     {
+        UpgradeList.Clear();
         UpgradeList.Add(0);
         UpgradeList.Add(1);
         UpgradeList.Add(2);
@@ -75,8 +110,63 @@ public class playerLevel : MonoBehaviour
         
     }
 
-    private void updateButons(int first,int second,int third)
+    public void button1Action()
     {
+        int upgrade = firstUpgrade;
+        switch (upgrade)
+        {
+            case 0: FindObjectOfType<PlayerStats>().gameObject.GetComponent<PlayerStats>().updatePlayerDamage(2);
+                 break;
+            case 1: FindObjectOfType<PlayerStats>().gameObject.GetComponent<PlayerStats>().playerHeal(6);
+                 break;
+            case 2: 
+                 break;
+            case 3: 
+                 break;
+        }
+        Time.timeScale = 1;
+        closeMenu();
+        
+
+    }
+    public void button2Action()
+    {
+        int upgrade = secondUpgrade;
+        switch (upgrade)
+        {
+            case 0: FindObjectOfType<PlayerStats>().gameObject.GetComponent<PlayerStats>().updatePlayerDamage(2);
+                break;
+            case 1: FindObjectOfType<PlayerStats>().gameObject.GetComponent<PlayerStats>().playerHeal(6);
+                break;
+            case 2: 
+                break;
+            case 3: 
+                break;
+        }
+        Time.timeScale = 1;
+        closeMenu();
         
     }
+    public void button3Action()
+    {
+        int upgrade = thirdUpgrade;
+        switch (upgrade)
+        {
+            case 0: FindObjectOfType<PlayerStats>().gameObject.GetComponent<PlayerStats>().updatePlayerDamage(2);
+                break;
+            case 1: FindObjectOfType<PlayerStats>().gameObject.GetComponent<PlayerStats>().playerHeal(6);
+                break;
+            case 2: 
+                break;
+            case 3: 
+                break;
+        }
+        Time.timeScale = 1;
+        closeMenu();
+        
+    }
+
+    
+
+    
 }

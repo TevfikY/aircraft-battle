@@ -78,6 +78,7 @@ GameObject:
   - component: {fileID: 3857564442389551346}
   - component: {fileID: 893011762499106596}
   - component: {fileID: 1641278745753367927}
+  - component: {fileID: 916273392}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -175,7 +176,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 6
 --- !u!114 &1919185975564171496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,7 +205,7 @@ MonoBehaviour:
   bulletObjects:
   - {fileID: 2160611896987437505, guid: 6d447b4e68238d043b95839ee5b48edc, type: 3}
   - {fileID: 5067698437996758563, guid: 27bb44efcd1020b4fa34936eaf22fa73, type: 3}
-  bulletSpeed: 300
+  bulletDamage: 100
   timeBetweenPlayerShots: 0.2
 --- !u!58 &3857564442389551346
 CircleCollider2D:
@@ -265,10 +266,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHP: 12
-  playerDamage: 1
+  playerDamage: 100
   firstHeart: {fileID: 0}
   secondHeart: {fileID: 0}
   thirdHeart: {fileID: 0}
+--- !u!114 &916273392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919185975564171499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e1593a5e3f487741b18a92818fa3931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expBar: {fileID: 0}
+  lvlText: {fileID: 0}
+  upgradeMenu: {fileID: 0}
+  firstButton: {fileID: 0}
+  secondButton: {fileID: 0}
+  thirdButton: {fileID: 0}
 --- !u!1 &7645662291136853547
 GameObject:
   m_ObjectHideFlags: 0
