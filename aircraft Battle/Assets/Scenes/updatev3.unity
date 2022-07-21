@@ -1872,6 +1872,10 @@ PrefabInstance:
       value: LevelManagement
       objectReference: {fileID: 0}
     - target: {fileID: 6210508390878755340, guid: 5b12b21c3cb72b141a7508c91176dfa9, type: 3}
+      propertyPath: backgroundSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6210508390878755340, guid: 5b12b21c3cb72b141a7508c91176dfa9, type: 3}
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 1801185508}
@@ -2199,6 +2203,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1152485102}
     - target: {fileID: 1641278745753367927, guid: cfbba28b2a016e2458b92ea5ca7a12f0, type: 3}
+      propertyPath: playerHP
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641278745753367927, guid: cfbba28b2a016e2458b92ea5ca7a12f0, type: 3}
       propertyPath: firstHeart
       value: 
       objectReference: {fileID: 783989256}
@@ -2261,6 +2269,10 @@ PrefabInstance:
     - target: {fileID: 1919185975564171497, guid: cfbba28b2a016e2458b92ea5ca7a12f0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1919185975564171498, guid: cfbba28b2a016e2458b92ea5ca7a12f0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1919185975564171499, guid: cfbba28b2a016e2458b92ea5ca7a12f0, type: 3}
       propertyPath: m_Name
