@@ -15,3 +15,4 @@ MonoBehaviour:
   enemyHP: 4
   enemyDamage: 1
   deathAnimation: {fileID: -330718904, guid: dc37c5c2724cc0649a787df38b3ccd90, type: 3}
+  enemyEXP: 10

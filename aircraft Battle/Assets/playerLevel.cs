@@ -12,7 +12,7 @@ public class playerLevel : MonoBehaviour
     [SerializeField] private Text lvlText;
     [SerializeField] GameObject upgradeMenu;
     private List<int> UpgradeList = new List<int>(); 
-    
+    private List<int> UpgradesOnScreen = new List<int>(); 
     // 0 is dmg Boost
     // 1 is HP boost
     // 2 double bullets
@@ -68,7 +68,7 @@ public class playerLevel : MonoBehaviour
         UpgradeList.Remove(UpgradeList[secondUpgrade]);    
         thirdUpgrade = UpgradeList[Random.Range(0, UpgradeList.Count)];
         
-        UpgradeList.Remove(UpgradeList[thirdUpgrade]);
+        //UpgradeList.Remove(UpgradeList[thirdUpgrade]);
         updateButtons();
     }
 
@@ -102,7 +102,6 @@ public class playerLevel : MonoBehaviour
 
     private void updateUpgradeList()
     {
-        UpgradeList.Clear();
         UpgradeList.Add(0);
         UpgradeList.Add(1);
         UpgradeList.Add(2);
@@ -127,7 +126,6 @@ public class playerLevel : MonoBehaviour
         Time.timeScale = 1;
         closeMenu();
         
-
     }
     public void button2Action()
     {
