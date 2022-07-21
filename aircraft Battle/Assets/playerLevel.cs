@@ -62,13 +62,13 @@ public class playerLevel : MonoBehaviour
         Time.timeScale = 0;
         firstUpgrade = UpgradeList[Random.Range(0, UpgradeList.Count)];
         
-        UpgradeList.Remove(UpgradeList[firstUpgrade]);
+        UpgradeList.Remove(firstUpgrade);
         secondUpgrade = UpgradeList[Random.Range(0, UpgradeList.Count)];
         
-        UpgradeList.Remove(UpgradeList[secondUpgrade]);    
+        UpgradeList.Remove(secondUpgrade);    
         thirdUpgrade = UpgradeList[Random.Range(0, UpgradeList.Count)];
         
-        //UpgradeList.Remove(UpgradeList[thirdUpgrade]);
+        UpgradeList.Remove(thirdUpgrade);
         updateButtons();
     }
 

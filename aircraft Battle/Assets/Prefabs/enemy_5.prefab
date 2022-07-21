@@ -236,7 +236,7 @@ MonoBehaviour:
   enemyBullet: {fileID: 7971217112430861435, guid: be9152e633bed19459467549c71e79b7, type: 3}
   bulletspeed: 5
   timeBetweenShots: 3
-  bulletPerSecond: 0.2
+  bulletPerSecond: 0.5
 --- !u!1 &5382242083540363435
 GameObject:
   m_ObjectHideFlags: 0

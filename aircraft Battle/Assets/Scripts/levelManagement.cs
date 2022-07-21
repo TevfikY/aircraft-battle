@@ -36,7 +36,7 @@ public class levelManagement : MonoBehaviour
             gridList[0].GetComponent<Rigidbody2D>().velocity = new Vector2(0, -backgroundSpeed);
             gridList[1].GetComponent<Rigidbody2D>().velocity = new Vector2(0, -backgroundSpeed);
         }
-        if ((playerTransform.position.y > gridList[0].transform.position.y) && (spawnTracker == 0))
+        if ((playerTransform.position.y > gridList[0].transform.position.y-3) && (spawnTracker == 0))
         {
             if (levelTracker % 200 < 50)
             {

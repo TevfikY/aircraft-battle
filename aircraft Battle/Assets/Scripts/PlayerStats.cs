@@ -26,8 +26,9 @@ public class PlayerStats : MonoBehaviour
 
     public void playerGetHit(float damage)
     {
+        int dmf;
         playerHP = playerHP - damage;
-        
+        if(playerHP<=0) Time.timeScale = 0;
         if (playerHP / maxHP > (8/12f))
         {
             firstHeart.enabled = true;
