@@ -8,6 +8,8 @@ using Random = UnityEngine.Random;
 public class LevelManagement : MonoBehaviour
 { 
     [SerializeField] private float backgroundSpeed = 2f;
+    [SerializeField] private float speedUp = 0.2f;
+    [SerializeField] private float maxSpeed = 10f;
     private int currentGrid;
     public float levelTracker = 0;
     private float spawnTracker = 0;
@@ -29,6 +31,11 @@ public class LevelManagement : MonoBehaviour
     private void Update()
     {
         tilerb.velocity = new Vector2(0, -backgroundSpeed);
+        if (gridList.Count == 2)
+        {
+            gridList[0].GetComponent<Rigidbody2D>().velocity = new Vector2(0, -backgroundSpeed);
+            gridList[1].GetComponent<Rigidbody2D>().velocity = new Vector2(0, -backgroundSpeed);
+        }
         if ((playerTransform.position.y > gridList[0].transform.position.y) && (spawnTracker == 0))
         {
             if (levelTracker % 200 < 50)
@@ -52,7 +59,7 @@ public class LevelManagement : MonoBehaviour
                 spawnGrid(currentGrid);
             }
         }
-        if (gridList[0].transform.position.y < -10)
+        if (gridList[0].transform.position.y < -9.6f)
         {
             destroyGrid(gridList[0]);
         }
@@ -61,10 +68,14 @@ public class LevelManagement : MonoBehaviour
     private void spawnGrid(int tileIndex)
     {
         go = Instantiate(tilePrefabs[tileIndex]);
-        go.transform.position = new Vector2(0, 9.8f);
+        go.transform.position = new Vector2(0, 9.6f);
         gridList.Add(go);
         tilerb = go.GetComponent<Rigidbody2D>();
         tilerb.velocity = new Vector2(0, -backgroundSpeed);
+        if (backgroundSpeed < maxSpeed)
+        {
+            backgroundSpeed += speedUp;
+        }
         spawnTracker += 10;
         levelTracker += 10;
     }

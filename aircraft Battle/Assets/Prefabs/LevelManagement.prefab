@@ -45,6 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backgroundSpeed: 5
+  speedUp: 0.1
+  maxSpeed: 10
   levelTracker: 0
   tilePrefabs:
   - {fileID: 8461631550382158716, guid: 96d57b5b8aa43b541b8b1e28f410431a, type: 3}
