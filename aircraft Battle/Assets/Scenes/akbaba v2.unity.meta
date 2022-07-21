@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:aircraft Battle/Assets/Scenes/updatev3.unity.meta
+guid: fc1024169cb609e45943476cb2135f3d
+========
 guid: a8a2131d5a5e8ff4b8cc5a7f7319f766
+>>>>>>>> Tile-Management:aircraft Battle/Assets/Scenes/akbaba v2.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

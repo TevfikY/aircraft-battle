@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8fd9bc79dad4194baf9514b54649744, type: 3}
   m_Name: enemy_0
   m_EditorClassIdentifier: 
-  enemyHP: 100
-  enemyDamage: 5
+  enemyHP: 4
+  enemyDamage: 1
   deathAnimation: {fileID: -330718904, guid: dc37c5c2724cc0649a787df38b3ccd90, type: 3}
+  enemyEXP: 10
