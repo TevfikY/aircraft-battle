@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class LevelManagement : MonoBehaviour
+public class levelManagement : MonoBehaviour
 { 
     [SerializeField] private float backgroundSpeed = 2f;
     [SerializeField] private float speedUp = 0.2f;
