@@ -11,6 +11,7 @@ public class EnemyStats : MonoBehaviour
     private Rigidbody2D rigidBodyOfEnemy;
     private Sprite enemySprite;
     private bool isDead = false;
+    private float enemyEXP;
     
     
     void Start()
@@ -19,6 +20,7 @@ public class EnemyStats : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         rigidBodyOfEnemy = GetComponent<Rigidbody2D>();
         enemySprite = GetComponent<SpriteRenderer>().sprite;
+        
     }
 
     // Update is called once per frame
@@ -31,6 +33,7 @@ public class EnemyStats : MonoBehaviour
     {
         hp = enemyConfig.getHP();
         damage = enemyConfig.getDamage();
+        enemyEXP = enemyConfig.getEXP();
     }
 
     public void hitEnemy(float damage)
@@ -49,6 +52,7 @@ public class EnemyStats : MonoBehaviour
             rigidBodyOfEnemy.velocity = Vector2.zero;
             
             Invoke("destroyEnemy",0.2f);
+            FindObjectOfType<playerLevel>().gameObject.GetComponent<playerLevel>().updateEXP(enemyEXP);
             
         }
     }
