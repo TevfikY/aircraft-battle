@@ -11,6 +11,7 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private Image firstHeart;
     [SerializeField] private Image secondHeart;
     [SerializeField] private Image thirdHeart;
+    [SerializeField] private float maxHPincreasingAmount = 6;
     
     private float maxHP;
     void Start()
@@ -58,6 +59,7 @@ public class PlayerStats : MonoBehaviour
     public void playerHeal(float hp)
     {
         playerHP += hp;
+        if (playerHP > maxHP) playerHP = maxHP;
     }
 
     public void updatePlayerDamage(float damage)
@@ -68,5 +70,10 @@ public class PlayerStats : MonoBehaviour
     public float getDamage()
     {
         return playerDamage;
+    }
+
+    public void increaseMaxHP()
+    {
+        maxHP += maxHPincreasingAmount;
     }
 }

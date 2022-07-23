@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DTValidator.Internal;
 using UnityEngine;
 
 public class EnemyStats : MonoBehaviour
@@ -46,11 +47,10 @@ public class EnemyStats : MonoBehaviour
         if (hp <= 0 && !isDead)
         {
             isDead = true;
-            
+            checkIsMiniBoss1();
             FindObjectOfType<enemySpawner>().decreaseEnemyCountByOne();
             spriteRenderer.sprite = enemyConfig.getSprite();
             rigidBodyOfEnemy.velocity = Vector2.zero;
-            
             Invoke("destroyEnemy",0.2f);
             FindObjectOfType<playerLevel>().gameObject.GetComponent<playerLevel>().updateEXP(enemyEXP);
             
@@ -67,6 +67,17 @@ public class EnemyStats : MonoBehaviour
         return damage;
     }
 
-   
+    void checkIsMiniBoss1()
+    {
+        if (gameObject.name == "enemy_5(Clone)")
+        {
+            Debug.Log("working");
+            for (int i = 0; i < 2; i++)
+            {
+                gameObject.transform.GetChild(i).GetComponent<SpriteRenderer>().enabled = false;
+            }  
+        }
+        
+    }
     
 }

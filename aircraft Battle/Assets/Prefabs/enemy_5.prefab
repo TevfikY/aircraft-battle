@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3954363063282320290}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: muzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 6469429735726601312}
   - component: {fileID: 5586533922615147223}
   - component: {fileID: 7400590262517994304}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: turretLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: -68728809, guid: dc37c5c2724cc0649a787df38b3ccd90, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 4050529648517075475}
   - component: {fileID: 8190465249912500894}
   - component: {fileID: 8967149879423659545}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: turretRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -208,7 +208,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: -68728809, guid: dc37c5c2724cc0649a787df38b3ccd90, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -246,7 +246,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6560090605764514836}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: muzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -282,6 +282,7 @@ GameObject:
   - component: {fileID: 7821600347667479414}
   - component: {fileID: 6497291339468563910}
   - component: {fileID: 8273524628997373032}
+  - component: {fileID: 871838191932970059}
   m_Layer: 7
   m_Name: enemy_5
   m_TagString: enemy
@@ -346,7 +347,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: b633c7a6aca21534a827bdfab419fd7c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -430,3 +431,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.87032396, y: 0.613791}
   m_EdgeRadius: 0
+--- !u!114 &871838191932970059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7160099949942978545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d1ad70ced64489498a94102e2ef6c9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

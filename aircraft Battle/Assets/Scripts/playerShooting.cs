@@ -8,6 +8,8 @@ using Vector2 = UnityEngine.Vector2;
 public class playerShooting : MonoBehaviour
 {
     private GameObject bullet;
+    private GameObject bullet2;
+    private GameObject bullet3;
     [SerializeField] private GameObject[] bulletObjects = new GameObject[2];
     // CurrentBulletType = 0 is for single fire per turret.
     // CurrentBulletType = 1 is double fire per turret.
@@ -38,29 +40,40 @@ public class playerShooting : MonoBehaviour
     private void OnTriggerStay2D(Collider2D other)
     {
         
-        if (other.gameObject.tag == "enemy")
+        if (other.gameObject.tag == "enemy" )
         {
             
             if (Time.time > timeReseter)
             {
 
-                if (CurrentBulletType == 0)
+                if (CurrentturretForm == 0)
                 {
-                    bullet = Instantiate(bulletObjects[CurrentBulletType], transform.GetChild(2).position,
-                        transform.GetChild(2).rotation);
-                    bullet.GetComponent<bulletAction>().setInitialTime(Time.time);
-                    bullet.GetComponent<Rigidbody2D>().velocity = Vector2.up*bulletSpeed*Time.deltaTime;
-                    timeReseter = Time.time + timeBetweenPlayerShots;
-                    bullet.GetComponent<bulletAction>().bulletDamage = bulletDamage; 
+                        bullet = Instantiate(bulletObjects[CurrentBulletType], transform.GetChild(2).position,
+                            transform.GetChild(2).rotation);
+                        bullet.GetComponent<bulletAction>().setInitialTime(Time.time);
+                        bullet.GetComponent<Rigidbody2D>().velocity = Vector2.up*bulletSpeed*Time.deltaTime;
+                        timeReseter = Time.time + timeBetweenPlayerShots;
+                        bullet.GetComponent<bulletAction>().bulletDamage = bulletDamage; 
+                    
+                    
                 }
-                else if (CurrentBulletType == 1)
+                else if (CurrentturretForm == 1)
                 {
-                    bullet = Instantiate(bulletObjects[CurrentBulletType], transform.GetChild(2).position,
-                        transform.GetChild(2).rotation);
-                    bullet.GetComponent<bulletAction>().setInitialTime(Time.time);
-                    bullet.GetComponent<Rigidbody2D>().velocity = Vector2.up*bulletSpeed*Time.deltaTime;
-                    timeReseter = Time.time + timeBetweenPlayerShots;
-                    bullet.GetComponent<bulletAction>().bulletDamage = bulletDamage; 
+                    
+                        bullet = Instantiate(bulletObjects[CurrentBulletType], transform.GetChild(0).position,
+                            transform.GetChild(0).rotation);
+                        bullet2 = Instantiate(bulletObjects[CurrentBulletType], transform.GetChild(1).position,
+                            transform.GetChild(1).rotation);
+                        bullet.GetComponent<bulletAction>().setInitialTime(Time.time);
+                        bullet.GetComponent<Rigidbody2D>().velocity = Vector2.up*bulletSpeed*Time.deltaTime;
+                        timeReseter = Time.time + timeBetweenPlayerShots;
+                        bullet.GetComponent<bulletAction>().bulletDamage = bulletDamage; 
+                        bullet2.GetComponent<bulletAction>().setInitialTime(Time.time);
+                        bullet2.GetComponent<Rigidbody2D>().velocity = Vector2.up*bulletSpeed*Time.deltaTime;
+                        timeReseter = Time.time + timeBetweenPlayerShots;
+                        bullet2.GetComponent<bulletAction>().bulletDamage = bulletDamage; 
+                    
+                    
                 }
                  
 
@@ -105,5 +118,10 @@ public class playerShooting : MonoBehaviour
     {
         CurrentBulletType = bulletType;
         Debug.Log(CurrentBulletType);
+    }
+
+    public void increaseTurretCount()
+    {
+        CurrentturretForm++;
     }
 }
