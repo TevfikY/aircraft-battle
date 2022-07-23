@@ -79,6 +79,7 @@ GameObject:
   - component: {fileID: 893011762499106596}
   - component: {fileID: 1641278745753367927}
   - component: {fileID: 916273392}
+  - component: {fileID: 1801185517}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -189,7 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce4b998ee1b1d014a9f34a21240c15e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 300
+  speed: 700
 --- !u!114 &8921398796415336041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,11 +266,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9586da89c1ed734459aa8520736fa7f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHP: 12
+  playerHP: 2222
   playerDamage: 100
   firstHeart: {fileID: 0}
   secondHeart: {fileID: 0}
   thirdHeart: {fileID: 0}
+  maxHPincreasingAmount: 6
 --- !u!114 &916273392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -282,12 +284,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e1593a5e3f487741b18a92818fa3931, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  armour: {fileID: 2717062197769619861, guid: 66bca8c0ede1b2a43add889f1952dede, type: 3}
   expBar: {fileID: 0}
   lvlText: {fileID: 0}
   upgradeMenu: {fileID: 0}
   firstButton: {fileID: 0}
   secondButton: {fileID: 0}
   thirdButton: {fileID: 0}
+--- !u!114 &1801185517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919185975564171499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41ec1a30a12796c408243e2b96929855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
 --- !u!1 &7645662291136853547
 GameObject:
   m_ObjectHideFlags: 0

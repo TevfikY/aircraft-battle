@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class playerLevel : MonoBehaviour
 {
     
+    [SerializeField] private GameObject armour;
     private float playerCurrentExp = 0;
     private float maxExp = 100;
     [SerializeField] Image expBar;
@@ -20,6 +21,7 @@ public class playerLevel : MonoBehaviour
     // 2 double bullets
     // 3 increase max HP
     // 4 increase turret size
+    // 5 barrier
      static int firstUpgrade;
      static int secondUpgrade;
      static int thirdUpgrade;
@@ -135,6 +137,8 @@ public class playerLevel : MonoBehaviour
                 textOnButton = "max hp boost"; break;
             case 4:
                 textOnButton = "increase turret count"; break;
+            case 5:
+                textOnButton = "barrier"; break;
                 
            
         }
@@ -144,11 +148,12 @@ public class playerLevel : MonoBehaviour
 
     private void updateUpgradeList()
     {
-        Debug.Log(isDoubleBullet);
+        
         UpgradeList.Add(0);
         UpgradeList.Add(1);
         //UpgradeList.Add(2);
         UpgradeList.Add(3);
+        UpgradeList.Add(5);
         //UpgradeList.Add(4);
         if (!isDoubleBullet && currentTurretForm < 3)
         {
@@ -206,7 +211,12 @@ public class playerLevel : MonoBehaviour
                 break;
             case 4: FindObjectOfType<playerShooting>().gameObject.GetComponent<playerShooting>().increaseTurretCount();
                 currentTurretForm++;
+                break; 
+            case 5:
+                Instantiate(armour, transform.position, transform.rotation);
+                GetComponent<PlayerStats>().setBarrierOn();
                 break;
+                
             
         }
 

@@ -18,7 +18,7 @@ TagManager:
   - PalyerCollider
   - EnemyBullet
   - turret
-  - 
+  - barrier
   - 
   - 
   - 
@@ -54,4 +54,7 @@ TagManager:
     locked: 0
   - name: bullets
     uniqueID: 3976549375
+    locked: 0
+  - name: barrier
+    uniqueID: 2430970897
     locked: 0

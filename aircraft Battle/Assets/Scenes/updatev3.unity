@@ -1103,7 +1103,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1503523954}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.9110804, y: -0.6386556, z: 0.29821903}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1207,11 +1207,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &1550297053 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1919185975564171499, guid: cfbba28b2a016e2458b92ea5ca7a12f0, type: 3}
-  m_PrefabInstance: {fileID: 1919185975390802843}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1613453570
 GameObject:
   m_ObjectHideFlags: 0
@@ -1538,19 +1533,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1919185975564171497, guid: cfbba28b2a016e2458b92ea5ca7a12f0, type: 3}
   m_PrefabInstance: {fileID: 1919185975390802843}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1801185517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1550297053}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41ec1a30a12796c408243e2b96929855, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 506320491}
 --- !u!1 &1895766006
 GameObject:
   m_ObjectHideFlags: 0
@@ -2256,17 +2238,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1951519215}
     - target: {fileID: 916273392, guid: cfbba28b2a016e2458b92ea5ca7a12f0, type: 3}
-      propertyPath: _playerScore
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 916273392, guid: cfbba28b2a016e2458b92ea5ca7a12f0, type: 3}
       propertyPath: secondButton
       value: 
       objectReference: {fileID: 1152485102}
-    - target: {fileID: 1641278745753367927, guid: cfbba28b2a016e2458b92ea5ca7a12f0, type: 3}
-      propertyPath: playerHP
-      value: 2222
-      objectReference: {fileID: 0}
+    - target: {fileID: 1801185517, guid: cfbba28b2a016e2458b92ea5ca7a12f0, type: 3}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 506320491}
     - target: {fileID: 1641278745753367927, guid: cfbba28b2a016e2458b92ea5ca7a12f0, type: 3}
       propertyPath: firstHeart
       value: 
@@ -2279,14 +2257,6 @@ PrefabInstance:
       propertyPath: secondHeart
       value: 
       objectReference: {fileID: 1133985711}
-    - target: {fileID: 1641278745753367927, guid: cfbba28b2a016e2458b92ea5ca7a12f0, type: 3}
-      propertyPath: playerDamage
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 1919185975564171496, guid: cfbba28b2a016e2458b92ea5ca7a12f0, type: 3}
-      propertyPath: speed
-      value: 700
-      objectReference: {fileID: 0}
     - target: {fileID: 1919185975564171497, guid: cfbba28b2a016e2458b92ea5ca7a12f0, type: 3}
       propertyPath: m_RootOrder
       value: 1

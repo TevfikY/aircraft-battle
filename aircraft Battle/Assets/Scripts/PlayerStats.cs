@@ -12,6 +12,8 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private Image secondHeart;
     [SerializeField] private Image thirdHeart;
     [SerializeField] private float maxHPincreasingAmount = 6;
+    private bool isBarrierOn = false;
+    private float barrierHP = 10;
     
     private float maxHP;
     void Start()
@@ -27,33 +29,55 @@ public class PlayerStats : MonoBehaviour
 
     public void playerGetHit(float damage)
     {
-        int dmf;
-        playerHP = playerHP - damage;
-        if(playerHP<=0) Time.timeScale = 0;
-        if (playerHP / maxHP > (8/12f))
+        Debug.Log(isBarrierOn);
+        if (!isBarrierOn)
         {
-            firstHeart.enabled = true;
-            secondHeart.enabled = true;
-            thirdHeart.enabled = true;
+            int dmf;
+            playerHP = playerHP - damage;
+            if(playerHP<=0) Time.timeScale = 0;
+            if (playerHP / maxHP > (8/12f))
+            {
+                firstHeart.enabled = true;
+                secondHeart.enabled = true;
+                thirdHeart.enabled = true;
+            }
+            else if (playerHP / maxHP > (4/12f))
+            {
+                firstHeart.enabled = true;
+                secondHeart.enabled = true;
+                thirdHeart.enabled = false;
+            }
+            else if (playerHP / maxHP > (1 / 12f))
+            {
+                firstHeart.enabled = true;
+                secondHeart.enabled = false;
+                thirdHeart.enabled = false;
+            }
+            else if (playerHP<=0)
+            {
+                firstHeart.enabled = false;
+                secondHeart.enabled = false;
+                thirdHeart.enabled = false;
+            }
         }
-        else if (playerHP / maxHP > (4/12f))
+        else if (isBarrierOn)
         {
-            firstHeart.enabled = true;
-            secondHeart.enabled = true;
-            thirdHeart.enabled = false;
+            if (barrierHP - damage > 0)
+            {
+                Debug.Log("barrier damage "+barrierHP );
+                barrierHP -= damage;
+            }
+            else
+            {
+                isBarrierOn = false;
+                GetComponent<barrier>().disableBarrier();
+                
+            }
         }
-        else if (playerHP / maxHP > (1 / 12f))
-        {
-            firstHeart.enabled = true;
-            secondHeart.enabled = false;
-            thirdHeart.enabled = false;
-        }
-        else if (playerHP<=0)
-        {
-            firstHeart.enabled = false;
-            secondHeart.enabled = false;
-            thirdHeart.enabled = false;
-        }
+        
+            
+            
+        
     }
 
     public void playerHeal(float hp)
@@ -75,5 +99,10 @@ public class PlayerStats : MonoBehaviour
     public void increaseMaxHP()
     {
         maxHP += maxHPincreasingAmount;
+    }
+
+    public void setBarrierOn()
+    {
+        isBarrierOn = true;
     }
 }
