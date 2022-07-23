@@ -17,12 +17,17 @@ public class playerLevel : MonoBehaviour
     // 1 is HP boost
     // 2 double bullets
     // 3 hp regen
-    private int firstUpgrade;
-    private int secondUpgrade;
-    private int thirdUpgrade;
+     static int firstUpgrade;
+     static int secondUpgrade;
+     static int thirdUpgrade;
     [SerializeField] private Button firstButton;
     [SerializeField]private Button secondButton;
     [SerializeField] private Button thirdButton;
+    private int copy1;
+    private int copy2;
+    private int copy3;
+    private int test = 11;
+    
     void Start()
     {
         expBar.fillAmount = playerCurrentExp / maxExp;
@@ -67,20 +72,39 @@ public class playerLevel : MonoBehaviour
         
         UpgradeList.Remove(secondUpgrade);    
         thirdUpgrade = UpgradeList[Random.Range(0, UpgradeList.Count)];
-        
-        UpgradeList.Remove(thirdUpgrade);
+        Debug.Log("openUpgrade");
+        Debug.Log(firstUpgrade);
+        Debug.Log(secondUpgrade);
+        Debug.Log(thirdUpgrade);
+        //UpgradeList.Remove(thirdUpgrade);
         updateButtons();
     }
 
     void updateButtons()
     {
+        Debug.Log("updateButtons");
+        Debug.Log(firstUpgrade);
+        Debug.Log(secondUpgrade);
+        Debug.Log(thirdUpgrade);
+        
+        //UpgradeList.Remove(thirdUpgrade);
         firstButton.GetComponentInChildren<Text>().text = getUpgrade(firstUpgrade);
         secondButton.GetComponentInChildren<Text>().text = getUpgrade(secondUpgrade);
         thirdButton.GetComponentInChildren<Text>().text = getUpgrade(thirdUpgrade);
+        
+        UpgradeList.Clear();
+        updateUpgradeList();
     }
     
     string getUpgrade(int up)
     {
+        Debug.Log("getUpgrade" );
+        Debug.Log(firstUpgrade);
+        Debug.Log(secondUpgrade);
+        Debug.Log(thirdUpgrade);
+        copy1 = firstUpgrade;
+        copy2 = secondUpgrade;
+        copy3 = thirdUpgrade;
         int upgrade = up;
         string textOnButton = " ";
         switch (upgrade)
@@ -88,7 +112,7 @@ public class playerLevel : MonoBehaviour
             case 0: 
                 textOnButton = "dmg Boost"; break;
             case 1: 
-                textOnButton = "hp regen"; break;
+                textOnButton = "hp boost"; break;
             case 2: 
                 textOnButton = "Dubble Bullets"; break;
             case 3: 
@@ -111,14 +135,24 @@ public class playerLevel : MonoBehaviour
 
     public void button1Action()
     {
-        int upgrade = firstUpgrade;
-        switch (upgrade)
+        Debug.Log("Button1Action");
+        Debug.Log(copy1);
+        Debug.Log(copy2);
+        Debug.Log(copy3);
+        
+        
+        int button1Upgrade = firstUpgrade;
+        
+        Debug.Log(button1Upgrade);
+        switch (button1Upgrade)
         {
             case 0: FindObjectOfType<PlayerStats>().gameObject.GetComponent<PlayerStats>().updatePlayerDamage(2);
                  break;
             case 1: FindObjectOfType<PlayerStats>().gameObject.GetComponent<PlayerStats>().playerHeal(6);
                  break;
-            case 2: 
+            case 2: Debug.Log("case double bullet"); 
+                FindObjectOfType<PlayerStats>().gameObject.GetComponent<playerShooting>().changeBulletType(1);
+                
                  break;
             case 3: 
                  break;
@@ -129,14 +163,24 @@ public class playerLevel : MonoBehaviour
     }
     public void button2Action()
     {
-        int upgrade = secondUpgrade;
-        switch (upgrade)
+        Debug.Log("Button1Action");
+        Debug.Log(copy1);
+        Debug.Log(copy2);
+        Debug.Log(copy3);
+        
+        
+        int button1Upgrade = secondUpgrade;
+        
+        Debug.Log(button1Upgrade);
+        switch (button1Upgrade)
         {
             case 0: FindObjectOfType<PlayerStats>().gameObject.GetComponent<PlayerStats>().updatePlayerDamage(2);
                 break;
             case 1: FindObjectOfType<PlayerStats>().gameObject.GetComponent<PlayerStats>().playerHeal(6);
                 break;
-            case 2: 
+            case 2: Debug.Log("case double bullet"); 
+                FindObjectOfType<PlayerStats>().gameObject.GetComponent<playerShooting>().changeBulletType(1);
+                
                 break;
             case 3: 
                 break;
@@ -147,14 +191,24 @@ public class playerLevel : MonoBehaviour
     }
     public void button3Action()
     {
-        int upgrade = thirdUpgrade;
-        switch (upgrade)
+        Debug.Log("Button1Action");
+        Debug.Log(copy1);
+        Debug.Log(copy2);
+        Debug.Log(copy3);
+        
+        
+        int button1Upgrade = thirdUpgrade;
+        
+        Debug.Log(button1Upgrade);
+        switch (button1Upgrade)
         {
             case 0: FindObjectOfType<PlayerStats>().gameObject.GetComponent<PlayerStats>().updatePlayerDamage(2);
                 break;
             case 1: FindObjectOfType<PlayerStats>().gameObject.GetComponent<PlayerStats>().playerHeal(6);
                 break;
-            case 2: 
+            case 2: Debug.Log("case double bullet"); 
+                FindObjectOfType<PlayerStats>().gameObject.GetComponent<playerShooting>().changeBulletType(1);
+                
                 break;
             case 3: 
                 break;
@@ -163,6 +217,8 @@ public class playerLevel : MonoBehaviour
         closeMenu();
         
     }
+
+   
 
     
 

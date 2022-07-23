@@ -162,7 +162,7 @@ public class enemySpawner : MonoBehaviour
        public void decreaseEnemyCountByOne()
        {
            --enemyCount;
-           Debug.Log("enemy count is " + enemyCount);
+           
            if (enemyCount <= 0)
            {
                

@@ -43,13 +43,26 @@ public class playerShooting : MonoBehaviour
             
             if (Time.time > timeReseter)
             {
-                
-                 bullet = Instantiate(bulletObjects[CurrentBulletType], transform.GetChild(2).position,
-                    transform.GetChild(2).rotation);
-                 bullet.GetComponent<bulletAction>().setInitialTime(Time.time);
-                bullet.GetComponent<Rigidbody2D>().velocity = Vector2.up*bulletSpeed*Time.deltaTime;
-                timeReseter = Time.time + timeBetweenPlayerShots;
-                bullet.GetComponent<bulletAction>().bulletDamage = bulletDamage;
+
+                if (CurrentBulletType == 0)
+                {
+                    bullet = Instantiate(bulletObjects[CurrentBulletType], transform.GetChild(2).position,
+                        transform.GetChild(2).rotation);
+                    bullet.GetComponent<bulletAction>().setInitialTime(Time.time);
+                    bullet.GetComponent<Rigidbody2D>().velocity = Vector2.up*bulletSpeed*Time.deltaTime;
+                    timeReseter = Time.time + timeBetweenPlayerShots;
+                    bullet.GetComponent<bulletAction>().bulletDamage = bulletDamage; 
+                }
+                else if (CurrentBulletType == 1)
+                {
+                    bullet = Instantiate(bulletObjects[CurrentBulletType], transform.GetChild(2).position,
+                        transform.GetChild(2).rotation);
+                    bullet.GetComponent<bulletAction>().setInitialTime(Time.time);
+                    bullet.GetComponent<Rigidbody2D>().velocity = Vector2.up*bulletSpeed*Time.deltaTime;
+                    timeReseter = Time.time + timeBetweenPlayerShots;
+                    bullet.GetComponent<bulletAction>().bulletDamage = bulletDamage; 
+                }
+                 
 
 
 
@@ -87,4 +100,10 @@ public class playerShooting : MonoBehaviour
         bullet.GetComponent<Rigidbody2D>().velocity = Vector2.up*bulletSpeed*Time.deltaTime;
     }
     */
+
+    public void changeBulletType(int bulletType)
+    {
+        CurrentBulletType = bulletType;
+        Debug.Log(CurrentBulletType);
+    }
 }
