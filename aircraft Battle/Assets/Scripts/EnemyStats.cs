@@ -71,7 +71,7 @@ public class EnemyStats : MonoBehaviour
     {
         if (gameObject.name == "enemy_5(Clone)")
         {
-            Debug.Log("working");
+           
             for (int i = 0; i < 2; i++)
             {
                 gameObject.transform.GetChild(i).GetComponent<SpriteRenderer>().enabled = false;
