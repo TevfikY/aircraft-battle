@@ -16,6 +16,13 @@ public class playerLevel : MonoBehaviour
     private List<int> UpgradeList = new List<int>(); 
     private List<int> SpecialUpgradeList = new List<int>();
     private static int currentTurretForm = 0;
+    [SerializeField] private Sprite healthImage;
+    [SerializeField] private Sprite healthMax;
+    [SerializeField] private Sprite barrier;
+    [SerializeField] private Sprite doubleBullet;
+    [SerializeField] private Sprite turretCount2;
+    [SerializeField] private Sprite turretCount3;
+    [SerializeField] private Sprite damageBoost;
     // 0 is dmg Boost
     // 1 is HP boost
     // 2 double bullets
@@ -39,6 +46,7 @@ public class playerLevel : MonoBehaviour
         lvlText.text = playerLvl.ToString();
         upgradeMenu.SetActive(false);
         updateUpgradeList();
+        
     }
 
     // Update is called once per frame
@@ -111,10 +119,10 @@ public class playerLevel : MonoBehaviour
     {
         
         //UpgradeList.Remove(thirdUpgrade);
-        firstButton.GetComponentInChildren<Text>().text = getUpgrade(firstUpgrade);
-        secondButton.GetComponentInChildren<Text>().text = getUpgrade(secondUpgrade);
-        thirdButton.GetComponentInChildren<Text>().text = getUpgrade(thirdUpgrade);
-        
+
+        firstButton.GetComponent<Image>().sprite = getSprite(firstUpgrade);
+        secondButton.GetComponent<Image>().sprite = getSprite(secondUpgrade);
+        thirdButton.GetComponent<Image>().sprite = getSprite(thirdUpgrade);
         UpgradeList.Clear();
         SpecialUpgradeList.Clear();
         updateUpgradeList();
@@ -145,6 +153,42 @@ public class playerLevel : MonoBehaviour
 
         return textOnButton;
     }
+
+    Sprite getSprite(int up)
+    {
+        int upgrade = up;
+        Sprite buttonSprite = healthImage;
+        switch (upgrade)
+        {
+            case 0:
+                buttonSprite = damageBoost;
+                break;
+            case 1:
+                buttonSprite = healthImage;
+                break;
+            case 2:
+                buttonSprite = doubleBullet;
+                break;
+            case 3:
+                buttonSprite = healthMax;
+                break;
+            case 4:
+
+                if (currentTurretForm < 1) buttonSprite = turretCount2;
+                else
+                {
+                    buttonSprite = turretCount3;
+                }
+                break;
+            case 5: buttonSprite = barrier;
+                break;
+                
+           
+        }
+
+        return buttonSprite;
+    }
+    
 
     private void updateUpgradeList()
     {

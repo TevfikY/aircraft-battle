@@ -15,6 +15,7 @@ public class PlayerStats : MonoBehaviour
     private bool isBarrierOn = false;
     private float barrierHP = 10;
     
+    
     private float maxHP;
     void Start()
     {
@@ -29,7 +30,7 @@ public class PlayerStats : MonoBehaviour
 
     public void playerGetHit(float damage)
     {
-        Debug.Log(isBarrierOn);
+        
         if (!isBarrierOn)
         {
             int dmf;

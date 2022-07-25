@@ -25,7 +25,7 @@ public class playerMovement : MonoBehaviour
 
     private void Update()
     {
-        move = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        //move = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
     }
 
@@ -33,8 +33,14 @@ public class playerMovement : MonoBehaviour
     {
         if (isAlive)
         {
-            rigidBody.AddForce(move*Time.deltaTime*speed,ForceMode2D.Force);
+            //rigidBody.AddForce(move*Time.deltaTime*speed,ForceMode2D.Force);
             //rigidBody.velocity = new Vector2(xAxis * speed * Time.deltaTime, 0); 
+            if (Input.GetMouseButton(0))
+            {
+                Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                transform.position = Vector2.MoveTowards(transform.position,new Vector2(mousePos.x,transform.position.y), speed); 
+            }
+            
         }
             
         

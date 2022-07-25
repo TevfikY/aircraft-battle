@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce4b998ee1b1d014a9f34a21240c15e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 700
+  speed: 1
 --- !u!114 &8921398796415336041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -288,6 +288,7 @@ MonoBehaviour:
   expBar: {fileID: 0}
   lvlText: {fileID: 0}
   upgradeMenu: {fileID: 0}
+  healthImage: {fileID: 0}
   firstButton: {fileID: 0}
   secondButton: {fileID: 0}
   thirdButton: {fileID: 0}
