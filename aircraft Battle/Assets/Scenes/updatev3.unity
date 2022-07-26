@@ -2094,7 +2094,7 @@ PrefabInstance:
       objectReference: {fileID: 506320491}
     - target: {fileID: 1641278745753367927, guid: cfbba28b2a016e2458b92ea5ca7a12f0, type: 3}
       propertyPath: playerHP
-      value: 1212
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 1641278745753367927, guid: cfbba28b2a016e2458b92ea5ca7a12f0, type: 3}
       propertyPath: firstHeart
@@ -2110,7 +2110,7 @@ PrefabInstance:
       objectReference: {fileID: 1133985711}
     - target: {fileID: 1641278745753367927, guid: cfbba28b2a016e2458b92ea5ca7a12f0, type: 3}
       propertyPath: playerDamage
-      value: 1212
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1919185975564171496, guid: cfbba28b2a016e2458b92ea5ca7a12f0, type: 3}
       propertyPath: speed
