@@ -30,7 +30,7 @@ public class PlayerStats : MonoBehaviour
 
     public void playerGetHit(float damage)
     {
-        Debug.Log(barrierHP);
+        
         if (!isBarrierOn)
         {
             int dmf;
