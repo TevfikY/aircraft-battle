@@ -16,6 +16,7 @@ public class enemySpawner : MonoBehaviour
        public bool allEnemiesAlive = true;
        private List<waveConfig> selectedWaves = new List<waveConfig>();
        private int enemyCount = 0;
+       private int fourPhazeCounter = 0;
        void Start()
        {
            StartCoroutine(spawn());
@@ -51,7 +52,8 @@ public class enemySpawner : MonoBehaviour
                    {
                        GameObject enemy = Instantiate(currentWave.GetEnemyPrefab(i),
                            currentWave.getStartingPoint().position, Quaternion.identity);
-                        
+                        increaseEnemyHP(enemy);
+                        increaseEnemyDMG(enemy);
                        
                        yield return new WaitForSeconds(timeBetweenEnemeies);
                    }
@@ -74,7 +76,8 @@ public class enemySpawner : MonoBehaviour
                        GameObject enemy = Instantiate(currentWave.GetEnemyPrefab(i),
                            currentWave.getStartingPoint().position, Quaternion.identity);
                        enemyCount++;
-                       
+                       increaseEnemyHP(enemy);
+                       increaseEnemyDMG(enemy);
                        
                        yield return new WaitForSeconds(timeBetweenEnemeies);
                    }
@@ -110,7 +113,8 @@ public class enemySpawner : MonoBehaviour
                    {
                        GameObject enemy = Instantiate(currentWave.GetEnemyPrefab(i),
                            currentWave.getStartingPoint().position, Quaternion.identity);
-                        
+                       increaseEnemyHP(enemy);
+                       increaseEnemyDMG(enemy);
                        
                        yield return new WaitForSeconds(timeBetweenEnemeies);
                    }
@@ -136,7 +140,8 @@ public class enemySpawner : MonoBehaviour
                        GameObject enemy = Instantiate(currentWave.GetEnemyPrefab(i),
                            currentWave.getStartingPoint().position, Quaternion.identity);
                        enemyCount++;
-                       
+                       increaseEnemyHP(enemy);
+                       increaseEnemyDMG(enemy);
                        
                        yield return new WaitForSeconds(timeBetweenEnemeies);
                    }
@@ -171,6 +176,22 @@ public class enemySpawner : MonoBehaviour
                
                if (phaze == 4) phaze = 0;
                StartCoroutine(spawn());
+           }
+       }
+
+       void increaseEnemyDMG(GameObject enemy)
+       {
+           for (int i = 0; i <= fourPhazeCounter; i++)
+           {
+               enemy.GetComponent<EnemyStats>().increaseEnemyDamage();
+           }
+       }
+
+       void increaseEnemyHP(GameObject enemy)
+       {
+           for (int i = 0; i <= fourPhazeCounter; i++)
+           {
+               enemy.GetComponent<EnemyStats>().increaseEnemyHP();
            }
        }
 }

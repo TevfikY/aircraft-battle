@@ -79,5 +79,15 @@ public class EnemyStats : MonoBehaviour
         }
         
     }
+
+    public void increaseEnemyDamage()
+    {
+        damage += 0.3f;
+    }
+
+    public void increaseEnemyHP()
+    {
+        hp += 1f;
+    }
     
 }

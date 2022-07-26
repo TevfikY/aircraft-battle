@@ -13,13 +13,14 @@ public class playerMovement : MonoBehaviour
     void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
+        Application.targetFrameRate = 60;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         PlayerMovement();
-        rigidBody.AddForce(-rigidBody.velocity*Time.deltaTime);
+        //rigidBody.AddForce(-rigidBody.velocity*Time.deltaTime);
     }
 
 

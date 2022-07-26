@@ -199,16 +199,16 @@ public class playerLevel : MonoBehaviour
         UpgradeList.Add(3);
         UpgradeList.Add(5);
         //UpgradeList.Add(4);
-        if (!isDoubleBullet && currentTurretForm < 3)
+        if (!isDoubleBullet && currentTurretForm < 2)
         {
             SpecialUpgradeList.Add(2);
             SpecialUpgradeList.Add(3);
             SpecialUpgradeList.Add(1);
             SpecialUpgradeList.Add(4);
         }
-        else if(isDoubleBullet && currentTurretForm <3)
+        else if(isDoubleBullet && currentTurretForm <2)
         {
-            Debug.Log("2. if");
+            
             SpecialUpgradeList.Add(3);
             SpecialUpgradeList.Add(0);
             //SpecialUpgradeList.Add(1);
@@ -216,6 +216,7 @@ public class playerLevel : MonoBehaviour
         }
         else
         {
+            
             SpecialUpgradeList.Add(0);
             SpecialUpgradeList.Add(1);
             SpecialUpgradeList.Add(3);

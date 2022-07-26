@@ -12,8 +12,8 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private Image secondHeart;
     [SerializeField] private Image thirdHeart;
     [SerializeField] private float maxHPincreasingAmount = 6;
-    private bool isBarrierOn = false;
-    private float barrierHP = 10;
+    private static bool isBarrierOn = false;
+    private static float barrierHP = 3;
     
     
     private float maxHP;
@@ -30,7 +30,7 @@ public class PlayerStats : MonoBehaviour
 
     public void playerGetHit(float damage)
     {
-        
+        Debug.Log(barrierHP);
         if (!isBarrierOn)
         {
             int dmf;
@@ -71,8 +71,9 @@ public class PlayerStats : MonoBehaviour
             else
             {
                 isBarrierOn = false;
-                GetComponent<barrier>().disableBarrier();
-                
+                FindObjectOfType<barrier>().GetComponent<barrier>().disableBarrier();
+                barrierHP = 3;
+
             }
         }
         
