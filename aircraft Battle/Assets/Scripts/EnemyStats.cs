@@ -48,6 +48,7 @@ public class EnemyStats : MonoBehaviour
         {
             isDead = true;
             checkIsMiniBoss1();
+            checkIsBoss0();
             FindObjectOfType<enemySpawner>().decreaseEnemyCountByOne();
             spriteRenderer.sprite = enemyConfig.getSprite();
             rigidBodyOfEnemy.velocity = Vector2.zero;
@@ -73,6 +74,18 @@ public class EnemyStats : MonoBehaviour
         {
            
             for (int i = 0; i < 2; i++)
+            {
+                gameObject.transform.GetChild(i).GetComponent<SpriteRenderer>().enabled = false;
+            }  
+        }
+        
+    }
+    void checkIsBoss0()
+    {
+        if (gameObject.name == "enemy_Boss_0(Clone)")
+        {
+           
+            for (int i = 0; i < 1; i++)
             {
                 gameObject.transform.GetChild(i).GetComponent<SpriteRenderer>().enabled = false;
             }  

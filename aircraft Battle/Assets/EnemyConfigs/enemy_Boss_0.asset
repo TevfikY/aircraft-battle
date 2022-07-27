@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c8fd9bc79dad4194baf9514b54649744, type: 3}
-  m_Name: enemy_3
+  m_Name: enemy_Boss_0
   m_EditorClassIdentifier: 
-  enemyHP: 30
-  enemyDamage: 0
-  deathAnimation: {fileID: -330718904, guid: dc37c5c2724cc0649a787df38b3ccd90, type: 3}
-  enemyEXP: 50
+  enemyHP: 100
+  enemyDamage: 1
+  deathAnimation: {fileID: -1019735828, guid: dc37c5c2724cc0649a787df38b3ccd90, type: 3}
+  enemyEXP: 100
