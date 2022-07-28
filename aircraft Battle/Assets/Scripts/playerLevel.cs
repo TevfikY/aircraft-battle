@@ -188,7 +188,12 @@ public class playerLevel : MonoBehaviour
 
         return buttonSprite;
     }
-    
+    // 0 is dmg Boost
+    // 1 is HP boost
+    // 2 double bullets
+    // 3 increase max HP
+    // 4 increase turret size
+    // 5 barrier
 
     private void updateUpgradeList()
     {
@@ -205,6 +210,13 @@ public class playerLevel : MonoBehaviour
             SpecialUpgradeList.Add(3);
             SpecialUpgradeList.Add(1);
             SpecialUpgradeList.Add(4);
+        }
+        else if (!isDoubleBullet && currentTurretForm == 2)
+        {
+            SpecialUpgradeList.Add(2);
+            SpecialUpgradeList.Add(3);
+            SpecialUpgradeList.Add(1);
+            
         }
         else if(isDoubleBullet && currentTurretForm <2)
         {
