@@ -143,15 +143,15 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1874327419
+  m_SortingLayer: 3
+  m_SortingOrder: 652
   m_Sprite: {fileID: 21300000, guid: 879a35dfeaff4a2419f158ad25ad0540, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.32, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce4b998ee1b1d014a9f34a21240c15e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 0.2
 --- !u!114 &8921398796415336041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,8 +241,8 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 1.28, y: 1.28}
+    newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -266,8 +266,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9586da89c1ed734459aa8520736fa7f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHP: 2222
-  playerDamage: 100
+  playerHP: 18
+  playerDamage: 1.5
   firstHeart: {fileID: 0}
   secondHeart: {fileID: 0}
   thirdHeart: {fileID: 0}
@@ -288,7 +288,13 @@ MonoBehaviour:
   expBar: {fileID: 0}
   lvlText: {fileID: 0}
   upgradeMenu: {fileID: 0}
-  healthImage: {fileID: 0}
+  healthImage: {fileID: 21300000, guid: 76d21cc803f5b764d85e021e0a1d1ee5, type: 3}
+  healthMax: {fileID: 21300000, guid: 849eb8f873dc1a84ba59fcddad71ab99, type: 3}
+  barrier: {fileID: 21300000, guid: 106fcc9c0b4d61047bd60a40b43f698d, type: 3}
+  doubleBullet: {fileID: 21300000, guid: 5440080e6e2305e41ab4e761fffa3864, type: 3}
+  turretCount2: {fileID: 21300000, guid: 7c8551c7e74a36f4ea11cbf9905ef7f5, type: 3}
+  turretCount3: {fileID: 21300000, guid: 4627e90592dc54c45849b6ba51e24f1b, type: 3}
+  damageBoost: {fileID: 21300000, guid: 009f8cec48c82f34b9c5b19e14c3a111, type: 3}
   firstButton: {fileID: 0}
   secondButton: {fileID: 0}
   thirdButton: {fileID: 0}
