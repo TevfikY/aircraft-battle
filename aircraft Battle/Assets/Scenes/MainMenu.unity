@@ -2804,7 +2804,7 @@ MonoBehaviour:
   volumeSlider: {fileID: 16428333}
   defaultVolume: 1
   confirmationPrompt: {fileID: 965856741}
-  _newGamelevel: Level1
+  _newGamelevel: updatev3
   noSavedGameDialog: {fileID: 1992751003}
 --- !u!4 &576393731
 Transform:
