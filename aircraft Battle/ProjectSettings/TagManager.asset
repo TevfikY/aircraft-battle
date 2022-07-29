@@ -3,17 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - enemy
+  tags: []
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - playerBullets
+  - 
   - Water
   - UI
-  - Player
-  - enemy
+  - 
+  - 
   - 
   - 
   - 
@@ -42,15 +41,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: tiles
-    uniqueID: 1947524477
+  - name: Character
+    uniqueID: 631109999
     locked: 0
-  - name: enemy
-    uniqueID: 96626477
+  - name: Main Menu
+    uniqueID: 504483319
     locked: 0
-  - name: player
-    uniqueID: 2420639877
+  - name: Options Menu
+    uniqueID: 499059767
     locked: 0
-  - name: bullets
-    uniqueID: 3976549375
+  - name: Popout Dialog
+    uniqueID: 2182324717
+    locked: 0
+  - name: Individual Settings
+    uniqueID: 245324271
     locked: 0
