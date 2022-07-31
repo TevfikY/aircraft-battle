@@ -59,7 +59,7 @@ public class levelManagement : MonoBehaviour
                 spawnGrid(currentGrid);
             }
         }
-        if (gridList[0].transform.position.y < -9.6f)
+        if (gridList[0].transform.position.y < -10f)
         {
             destroyGrid(gridList[0]);
         }
