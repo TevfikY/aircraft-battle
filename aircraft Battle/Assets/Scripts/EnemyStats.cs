@@ -100,7 +100,7 @@ public class EnemyStats : MonoBehaviour
 
     public void increaseEnemyHP()
     {
-        hp += 1f;
+        hp += 3f;
     }
     
 }

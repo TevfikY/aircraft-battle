@@ -127,6 +127,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LoadCharacter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/playerSkin.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -202,6 +203,7 @@
       <updated>1659010374725</updated>
       <workItem from="1659010671556" duration="843000" />
       <workItem from="1659085028515" duration="2869000" />
+      <workItem from="1659421996111" duration="1808000" />
     </task>
     <servers />
   </component>

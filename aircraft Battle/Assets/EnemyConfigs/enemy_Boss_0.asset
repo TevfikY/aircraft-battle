@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8fd9bc79dad4194baf9514b54649744, type: 3}
   m_Name: enemy_Boss_0
   m_EditorClassIdentifier: 
-  enemyHP: 100
+  enemyHP: 67
   enemyDamage: 1
-  deathAnimation: {fileID: -1019735828, guid: dc37c5c2724cc0649a787df38b3ccd90, type: 3}
+  deathAnimation: {fileID: 21300000, guid: b9dd0c6ac6f596a429f35de4937a4795, type: 2}
   enemyEXP: 100
