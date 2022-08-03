@@ -59,7 +59,11 @@ public class levelManagement : MonoBehaviour
                 spawnGrid(currentGrid);
             }
         }
+<<<<<<< Updated upstream
         if (gridList[0].transform.position.y < -10f)
+=======
+        if (gridList[0].transform.position.y < -10f) //-9.6f
+>>>>>>> Stashed changes
         {
             destroyGrid(gridList[0]);
         }
@@ -68,7 +72,7 @@ public class levelManagement : MonoBehaviour
     private void spawnGrid(int tileIndex)
     {
         go = Instantiate(tilePrefabs[tileIndex]);
-        go.transform.position = new Vector2(0, 9.6f);
+        go.transform.position = new Vector2(0, 9.2f);
         gridList.Add(go);
         tilerb = go.GetComponent<Rigidbody2D>();
         tilerb.velocity = new Vector2(0, -backgroundSpeed);
