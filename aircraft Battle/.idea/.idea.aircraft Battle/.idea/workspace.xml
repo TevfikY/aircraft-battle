@@ -11,7 +11,6 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LoadCharacter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/levelManagement.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -81,6 +80,7 @@
       <workItem from="1659010671556" duration="843000" />
       <workItem from="1659085028515" duration="2869000" />
       <workItem from="1659291912620" duration="169000" />
+      <workItem from="1659628913607" duration="474000" />
     </task>
     <servers />
   </component>

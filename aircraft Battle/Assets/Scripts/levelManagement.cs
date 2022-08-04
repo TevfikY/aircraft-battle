@@ -36,7 +36,7 @@ public class levelManagement : MonoBehaviour
             gridList[0].GetComponent<Rigidbody2D>().velocity = new Vector2(0, -backgroundSpeed);
             gridList[1].GetComponent<Rigidbody2D>().velocity = new Vector2(0, -backgroundSpeed);
         }
-        if ((playerTransform.position.y > gridList[0].transform.position.y-3) && (spawnTracker == 0))
+        if ((playerTransform.position.y > gridList[0].transform.position.y-3) && (spawnTracker < 20))
         {
             if (levelTracker % 200 < 50)
             {
@@ -59,11 +59,7 @@ public class levelManagement : MonoBehaviour
                 spawnGrid(currentGrid);
             }
         }
-<<<<<<< Updated upstream
-        if (gridList[0].transform.position.y < -10f)
-=======
-        if (gridList[0].transform.position.y < -10f) //-9.6f
->>>>>>> Stashed changes
+        if (gridList[0].transform.position.y < -15f) //-9.6f
         {
             destroyGrid(gridList[0]);
         }
@@ -72,7 +68,7 @@ public class levelManagement : MonoBehaviour
     private void spawnGrid(int tileIndex)
     {
         go = Instantiate(tilePrefabs[tileIndex]);
-        go.transform.position = new Vector2(0, 9.2f);
+        go.transform.position = new Vector2(0, gridList[gridList.Count - 1].transform.position.y + 10);
         gridList.Add(go);
         tilerb = go.GetComponent<Rigidbody2D>();
         tilerb.velocity = new Vector2(0, -backgroundSpeed);
