@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyHP: 4
   enemyDamage: 1
-  deathAnimation: {fileID: -330718904, guid: dc37c5c2724cc0649a787df38b3ccd90, type: 3}
+  deathAnimation: {fileID: -1250836037, guid: 67ff98bb66fdfda438586facfa4593ab, type: 3}
   enemyEXP: 10

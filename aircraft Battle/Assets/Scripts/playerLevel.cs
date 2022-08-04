@@ -259,7 +259,7 @@ public class playerLevel : MonoBehaviour
         {
             case 0: FindObjectOfType<PlayerStats>().gameObject.GetComponent<PlayerStats>().updatePlayerDamage(2);
                 break;
-            case 1: FindObjectOfType<PlayerStats>().gameObject.GetComponent<PlayerStats>().playerHeal(6);
+            case 1: FindObjectOfType<PlayerStats>().gameObject.GetComponent<PlayerStats>().playerHeal(10);
                 break;
             case 2: FindObjectOfType<PlayerStats>().gameObject.GetComponent<playerShooting>().changeBulletType(1);
                 isDoubleBullet = true;
