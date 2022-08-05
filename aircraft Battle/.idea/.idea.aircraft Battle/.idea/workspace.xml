@@ -4,122 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="081245cc-4189-4442-ac51-43462a872342" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/04_heart1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/04_heart1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/04_heart2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/04_heart2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/04_heart3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/04_heart3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/04_heart4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/04_heart4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/04_heart5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/04_heart5.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/04_heart6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/04_heart6.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/04_heart7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/04_heart7.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Bar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Bar.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Bar4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Bar4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Boarder4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Boarder4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnemyBulletAction.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnemyBulletAction.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnemyConfigCreatorCode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnemyConfigCreatorCode.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnemySpawner.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnemySpawner.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnemyStats.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnemyStats.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HealthUI.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HealthUI.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LoadPrefs.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LoadPrefs.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MenuController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MenuController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PathFinder.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PathFinder.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerAssets/boss_0Bullet.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerAssets/boss_0Bullet.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerAssets/enemyBullet_0.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerAssets/enemyBullet_0.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerAssets/enemyBullet_1.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerAssets/enemyBullet_1.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerAssets/enemy_1.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerAssets/enemy_1.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerAssets/enemy_3.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerAssets/enemy_3.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerAssets/enemy_5.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerAssets/enemy_5.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerAssets/enemy_Boss_0.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerAssets/enemy_Boss_0.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerAssets/miniBoss_0Bullet.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerAssets/miniBoss_0Bullet.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerSelection.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerSelection.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerStats.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerStats.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/HPBar.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/HPBar.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ViewportHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ViewportHandler.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/barrier.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/barrier.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/bossPathFinder.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/bossPathFinder.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/boss_0BulletAction.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/boss_0BulletAction.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/boss_0Turret.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/boss_0Turret.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/cameraAnchor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/cameraAnchor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/checkmark-png-25977.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/checkmark-png-25977.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/enemyBullet_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/enemyBullet_0.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/enemyBullet_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/enemyBullet_1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/enemyShoot.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/enemyShoot.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/enemy_5DeathFix.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/enemy_5DeathFix.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/game-world-of-warplanes_870x1536_xtrafondos.com.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/game-world-of-warplanes_870x1536_xtrafondos.com.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/kamikazeEnemey.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/kamikazeEnemey.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/levelManagement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/levelManagement.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/logo2.0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/logo2.0.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/lvltestempty.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/lvltestempty.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/miniBossBullet.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/miniBossBullet.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/olivi-by-olivi-warthunder-game-art-art-transport-vehicles-vo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/olivi-by-olivi-warthunder-game-art-art-transport-vehicles-vo.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/pathFİnderForenemy_2.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/pathFİnderForenemy_2.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/playerFollower.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/playerFollower.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/playerLevel.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/playerLevel.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/playerScore.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/playerScore.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/pngegg (1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/pngegg (1).png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/sprites/kenney_pixelshmup/Ships/ship_0018.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/sprites/kenney_pixelshmup/Ships/ship_0018.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/sprites/kenney_pixelshmup/Ships/ship_0019.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/sprites/kenney_pixelshmup/Ships/ship_0019.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/turretAttack.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/turretAttack.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/wallpaperflare.com_wallpaper.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/wallpaperflare.com_wallpaper.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/wavePositionOnScene.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/wavePositionOnScene.cs.meta" beforeDir="false" />
-    </list>
+    <list default="true" id="081245cc-4189-4442-ac51-43462a872342" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -127,7 +12,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LoadCharacter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/playerSkin.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -204,6 +88,7 @@
       <workItem from="1659010671556" duration="843000" />
       <workItem from="1659085028515" duration="2869000" />
       <workItem from="1659421996111" duration="1808000" />
+      <workItem from="1659694155845" duration="2012000" />
     </task>
     <servers />
   </component>
