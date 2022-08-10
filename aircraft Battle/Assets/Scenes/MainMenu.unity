@@ -9791,6 +9791,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MenuController
       objectReference: {fileID: 0}
+    - target: {fileID: 3909642652096351006, guid: 2013494c3f6f80341a51b8fee91c9d0b, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: adbaff1400d10fd45979b614e15617ec, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2013494c3f6f80341a51b8fee91c9d0b, type: 3}
 --- !u!1001 &4502986408746347188
