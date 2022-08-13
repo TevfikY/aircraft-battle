@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
+    [SerializeField] private GameObject gameOver;
+    [SerializeField] private Button pauseButton;
     [SerializeField] private float playerHP;
     [SerializeField] private float playerDamage;
     [SerializeField] private Image firstHeart;
@@ -35,7 +37,12 @@ public class PlayerStats : MonoBehaviour
         {
             int dmf;
             playerHP = playerHP - damage;
-            if(playerHP<=0) Time.timeScale = 0;
+            if (playerHP <= 0)
+            {
+                Time.timeScale = 0;
+                gameOver.SetActive(true);
+                pauseButton.enabled = false;
+            }
             if (playerHP / maxHP > (8/12f))
             {
                 firstHeart.enabled = true;
