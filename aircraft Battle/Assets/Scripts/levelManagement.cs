@@ -40,23 +40,75 @@ public class levelManagement : MonoBehaviour
         {
             if (levelTracker % 200 < 50)
             {
-                currentGrid = Random.Range(0, 4);
-                spawnGrid(currentGrid);
+                if (levelTracker % 200 == 0)
+                {
+                    currentGrid = 16;
+                    spawnGrid(currentGrid);
+                }
+                else if (levelTracker % 200 == 40)
+                {
+                    currentGrid = 20;
+                    spawnGrid(currentGrid);
+                }
+                else
+                {
+                    currentGrid = Random.Range(0, 4);
+                    spawnGrid(currentGrid);
+                }
             }
             else if (levelTracker % 200 < 100)
             {
-                currentGrid = Random.Range(4, 8);
-                spawnGrid(currentGrid);
+                if (levelTracker % 200 == 50)
+                {
+                    currentGrid = 17;
+                    spawnGrid(currentGrid);
+                }
+                else if (levelTracker % 200 == 90)
+                {
+                    currentGrid = 21;
+                    spawnGrid(currentGrid);
+                }
+                else
+                {
+                    currentGrid = Random.Range(4, 8);
+                    spawnGrid(currentGrid);
+                }
             }
             else if (levelTracker % 200 < 150)
             {
-                currentGrid = Random.Range(8, 12);
-                spawnGrid(currentGrid);
+                if (levelTracker % 200 == 100)
+                {
+                    currentGrid = 18;
+                    spawnGrid(currentGrid);
+                }
+                else if (levelTracker % 200 == 140)
+                {
+                    currentGrid = 22;
+                    spawnGrid(currentGrid);
+                }
+                else
+                {
+                    currentGrid = Random.Range(8, 12);
+                    spawnGrid(currentGrid);
+                }
             }
             else if (levelTracker % 200 < 200)
             {
-                currentGrid = Random.Range(12, 16);
-                spawnGrid(currentGrid);
+                if (levelTracker % 200 == 150)
+                {
+                    currentGrid = 19;
+                    spawnGrid(currentGrid);
+                }
+                else if (levelTracker % 200 == 190)
+                {
+                    currentGrid = 23;
+                    spawnGrid(currentGrid);
+                }
+                else
+                {
+                    currentGrid = Random.Range(12, 16);
+                    spawnGrid(currentGrid);
+                }
             }
         }
         if (gridList[0].transform.position.y < -15f) //-9.6f
