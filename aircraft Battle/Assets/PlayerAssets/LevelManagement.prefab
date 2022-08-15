@@ -47,7 +47,7 @@ MonoBehaviour:
   backgroundSpeed: 5
   speedUp: 0.1
   maxSpeed: 10
-  levelTracker: 0
+  levelTracker: 10
   tilePrefabs:
   - {fileID: 8461631550382158716, guid: 96d57b5b8aa43b541b8b1e28f410431a, type: 3}
   - {fileID: 7933873653767782373, guid: 9faf74654dbc99a42a2e14fcca73ef33, type: 3}
@@ -57,13 +57,21 @@ MonoBehaviour:
   - {fileID: 8358802588172851707, guid: 870c049164cae6f4ba1907dc3fa5351e, type: 3}
   - {fileID: 9062621540874381316, guid: 078939e42b436054a9c50523a8248c77, type: 3}
   - {fileID: 758793029096847716, guid: 46ad775e1a7eb18419c65cdfe3126dae, type: 3}
-  - {fileID: 757021870592302455, guid: 97e5ee26d084afc45af3fd26362b87dc, type: 3}
-  - {fileID: 965208343732232692, guid: 0c8f7557dfc349944a9f9e4b9caa196d, type: 3}
   - {fileID: 8084889644046920674, guid: 34352254d10309745b11f2249dafc708, type: 3}
+  - {fileID: 965208343732232692, guid: 0c8f7557dfc349944a9f9e4b9caa196d, type: 3}
+  - {fileID: 757021870592302455, guid: 97e5ee26d084afc45af3fd26362b87dc, type: 3}
   - {fileID: 719789481676755767, guid: 6798c8c92acd253429e52775d2de50d4, type: 3}
   - {fileID: 2512575472475370821, guid: fe5191f0f4d7d5a4993ca2275cce2537, type: 3}
   - {fileID: 4801214648918022174, guid: b760edc0478b47d469434805625cc120, type: 3}
   - {fileID: 5554132267383091048, guid: be449dc380deca046ae8c3e20dc195cc, type: 3}
   - {fileID: 8190007261137988631, guid: fc7b9717b5dd7f348919362e5dde883c, type: 3}
+  - {fileID: 787723596229183581, guid: 46dfa021a0aa705459b5cf91a8c84b5b, type: 3}
+  - {fileID: 6842621006350211425, guid: 0922a5d883cb4ba40a89c06626471e36, type: 3}
+  - {fileID: 8084889644046920674, guid: 34352254d10309745b11f2249dafc708, type: 3}
+  - {fileID: 3346648704921438146, guid: 5429a37e83f2750408f179f9b4ed7bd4, type: 3}
+  - {fileID: 3644370251094463174, guid: 1ed0939feb3f6db4cb635abc873d9e29, type: 3}
+  - {fileID: 1790883637048129896, guid: 83be55c2c93be9d48ab8849364c55ddc, type: 3}
+  - {fileID: 5472119445041127499, guid: fa26e8e57e09b8345bbbc6eed1fca765, type: 3}
+  - {fileID: 1397536005959185176, guid: 7a4d58b66e24dd64b8ba6d4ff52fd277, type: 3}
   gridList: []
   playerTransform: {fileID: 0}
