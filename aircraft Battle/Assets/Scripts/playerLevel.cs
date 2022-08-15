@@ -38,10 +38,12 @@ public class playerLevel : MonoBehaviour
     [SerializeField] private List<Sprite> redSkins;
     [SerializeField] private List<Sprite> greenSkins;
     [SerializeField] private List<Sprite> yellowSkins;
+    [SerializeField] private  Button pauseButton;
     private int selectedUpgrade;
     private static bool isDoubleBullet = false;
     private int selectedCharacter;
     private SpriteRenderer sr;
+    private static float playerScore = 0;
     
     
     void Start()
@@ -62,10 +64,12 @@ public class playerLevel : MonoBehaviour
 
     public void updateEXP(float exp)
     {
+        playerScore += exp;
         playerCurrentExp += exp;
         GetComponent<playerScore>().updateScore(exp);
         if (playerCurrentExp >= maxExp)
         {
+            
             playerLvl++;
             lvlText.text = playerLvl.ToString();
             playerCurrentExp -= maxExp;
@@ -88,10 +92,12 @@ public class playerLevel : MonoBehaviour
     {
         //upgradeMenu.SetActive(false);
         FindObjectOfType<lvltestempty>().gameObject.SetActive(false);
+        FindObjectOfType<buttonFinder>().gameObject.GetComponent<Image>().enabled = true;
     }
     private void openUpgradeMenu()
     {
         upgradeMenu.SetActive(true);
+        FindObjectOfType<buttonFinder>().gameObject.GetComponent<Image>().enabled = false;
         Time.timeScale = 0;
         firstUpgrade = UpgradeList[Random.Range(0, UpgradeList.Count)];
         
@@ -107,6 +113,7 @@ public class playerLevel : MonoBehaviour
     void openSpecialUpgradeMenu()
     {
         upgradeMenu.SetActive(true);
+        FindObjectOfType<buttonFinder>().gameObject.GetComponent<Image>().enabled = false;
         Time.timeScale = 0;
         Debug.Log(SpecialUpgradeList.Count);
         firstUpgrade = SpecialUpgradeList[Random.Range(0, SpecialUpgradeList.Count)];
@@ -284,6 +291,7 @@ public class playerLevel : MonoBehaviour
 
        
         Time.timeScale = 1;
+        
         closeMenu();
     }
 
@@ -320,6 +328,16 @@ public class playerLevel : MonoBehaviour
             }
         }
         
+    }
+
+    public float getScore()
+    {
+        return playerScore;
+    }
+
+    public void resetScore()
+    {
+        playerScore = 0;
     }
     
    

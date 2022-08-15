@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,7 +17,8 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private float maxHPincreasingAmount = 6;
     private static bool isBarrierOn = false;
     private static float barrierHP = 3;
-    
+    [SerializeField] private TextMeshProUGUI currentScore;
+    [SerializeField] private TextMeshProUGUI bestScore;
     
     private float maxHP;
     void Start()
@@ -39,6 +41,23 @@ public class PlayerStats : MonoBehaviour
             playerHP = playerHP - damage;
             if (playerHP <= 0)
             {
+                
+                
+                if (PlayerPrefs.HasKey("playerScore"))
+                {
+                    if (PlayerPrefs.GetFloat("playerScore") < GetComponent<playerLevel>().getScore())
+                    {
+                        PlayerPrefs.SetFloat("playerScore",GetComponent<playerLevel>().getScore());
+                    }
+                }
+                else
+                {
+                    PlayerPrefs.SetFloat("playerScore",GetComponent<playerLevel>().getScore());
+                }
+                currentScore.text = GetComponent<playerLevel>().getScore().ToString();
+                GetComponent<playerLevel>().resetScore();
+                bestScore.text = PlayerPrefs.GetFloat("playerScore").ToString();
+                
                 Time.timeScale = 0;
                 gameOver.SetActive(true);
                 pauseButton.enabled = false;
