@@ -35,9 +35,15 @@ public class playerLevel : MonoBehaviour
     [SerializeField] private Button firstButton;
     [SerializeField]private Button secondButton;
     [SerializeField] private Button thirdButton;
+    [SerializeField] private List<Sprite> redSkins;
+    [SerializeField] private List<Sprite> greenSkins;
+    [SerializeField] private List<Sprite> yellowSkins;
+    [SerializeField] private  Button pauseButton;
     private int selectedUpgrade;
     private static bool isDoubleBullet = false;
-    
+    private int selectedCharacter;
+    private SpriteRenderer sr;
+    private static float playerScore = 0;
     
     
     void Start()
@@ -46,7 +52,8 @@ public class playerLevel : MonoBehaviour
         lvlText.text = playerLvl.ToString();
         upgradeMenu.SetActive(false);
         updateUpgradeList();
-        
+        selectedCharacter = PlayerPrefs.GetInt("selectedCharacter");
+        sr = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -57,10 +64,12 @@ public class playerLevel : MonoBehaviour
 
     public void updateEXP(float exp)
     {
+        playerScore += exp;
         playerCurrentExp += exp;
         GetComponent<playerScore>().updateScore(exp);
         if (playerCurrentExp >= maxExp)
         {
+            
             playerLvl++;
             lvlText.text = playerLvl.ToString();
             playerCurrentExp -= maxExp;
@@ -73,7 +82,7 @@ public class playerLevel : MonoBehaviour
             {
                 openUpgradeMenu(); 
             }
-            
+            changePlane(playerLvl);
             
         }
         expBar.fillAmount = playerCurrentExp / maxExp;
@@ -83,10 +92,12 @@ public class playerLevel : MonoBehaviour
     {
         //upgradeMenu.SetActive(false);
         FindObjectOfType<lvltestempty>().gameObject.SetActive(false);
+        FindObjectOfType<buttonFinder>().gameObject.GetComponent<Image>().enabled = true;
     }
     private void openUpgradeMenu()
     {
         upgradeMenu.SetActive(true);
+        FindObjectOfType<buttonFinder>().gameObject.GetComponent<Image>().enabled = false;
         Time.timeScale = 0;
         firstUpgrade = UpgradeList[Random.Range(0, UpgradeList.Count)];
         
@@ -102,6 +113,7 @@ public class playerLevel : MonoBehaviour
     void openSpecialUpgradeMenu()
     {
         upgradeMenu.SetActive(true);
+        FindObjectOfType<buttonFinder>().gameObject.GetComponent<Image>().enabled = false;
         Time.timeScale = 0;
         Debug.Log(SpecialUpgradeList.Count);
         firstUpgrade = SpecialUpgradeList[Random.Range(0, SpecialUpgradeList.Count)];
@@ -279,9 +291,55 @@ public class playerLevel : MonoBehaviour
 
        
         Time.timeScale = 1;
+        
         closeMenu();
     }
 
+    void changePlane(int lvl)
+    {
+        if (lvl == 3)
+        {
+            if (selectedCharacter == 0)
+            {
+                sr.sprite = redSkins[0];
+            }
+            else if (selectedCharacter == 1)
+            {
+                sr.sprite = greenSkins[0];
+            }
+            else if (selectedCharacter == 2)
+            {
+                sr.sprite = yellowSkins[0];
+            }
+        }
+        else if (lvl == 6)
+        {
+            if (selectedCharacter == 0)
+            {
+                sr.sprite = redSkins[1];  
+            }
+            else if (selectedCharacter == 1)
+            {
+                sr.sprite = greenSkins[1];    
+            }
+            else if (selectedCharacter == 2)
+            {
+                sr.sprite = yellowSkins[1];    
+            }
+        }
+        
+    }
+
+    public float getScore()
+    {
+        return playerScore;
+    }
+
+    public void resetScore()
+    {
+        playerScore = 0;
+    }
+    
    
 
     
