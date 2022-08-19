@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class EnemyStats : MonoBehaviour
 {
-     float hp = 4;
-     private float damage = 1;
+     float  hp = 0;
+     private   float damage = 0;
     [SerializeField] EnemyConfigCreatorCode enemyConfig;
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rigidBodyOfEnemy;
@@ -27,7 +27,7 @@ public class EnemyStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log("enemy Damage : "+ damage);
     }
 
     void updateStats()
@@ -95,12 +95,12 @@ public class EnemyStats : MonoBehaviour
 
     public void increaseEnemyDamage()
     {
-        damage += 0.3f;
+        enemyConfig.increaseDMG();
     }
 
     public void increaseEnemyHP()
     {
-        hp += 3f;
+        enemyConfig.increaseHP();
     }
     
 }

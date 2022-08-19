@@ -39,6 +39,7 @@ public class playerLevel : MonoBehaviour
     [SerializeField] private List<Sprite> greenSkins;
     [SerializeField] private List<Sprite> yellowSkins;
     [SerializeField] private  Button pauseButton;
+    [SerializeField] private AudioSource audio;
     private int selectedUpgrade;
     private static bool isDoubleBullet = false;
     private int selectedCharacter;
@@ -93,9 +94,11 @@ public class playerLevel : MonoBehaviour
         //upgradeMenu.SetActive(false);
         FindObjectOfType<lvltestempty>().gameObject.SetActive(false);
         FindObjectOfType<buttonFinder>().gameObject.GetComponent<Image>().enabled = true;
+        
     }
     private void openUpgradeMenu()
     {
+        audio.pitch = 0.59f;
         upgradeMenu.SetActive(true);
         FindObjectOfType<buttonFinder>().gameObject.GetComponent<Image>().enabled = false;
         Time.timeScale = 0;
@@ -209,12 +212,29 @@ public class playerLevel : MonoBehaviour
 
     private void updateUpgradeList()
     {
-        
+        /*
         UpgradeList.Add(0);
         UpgradeList.Add(1);
         //UpgradeList.Add(2);
         UpgradeList.Add(3);
-        UpgradeList.Add(5);
+        */
+        Debug.Log(GetComponent<PlayerStats>().checkIsBarrierOn());
+        if (GetComponent<PlayerStats>().checkIsBarrierOn())
+        {
+            UpgradeList.Add(0);
+            UpgradeList.Add(1);
+            //UpgradeList.Add(2);
+            UpgradeList.Add(3);
+        }
+        else
+        {
+            UpgradeList.Add(0);
+            UpgradeList.Add(1);
+            //UpgradeList.Add(2);
+            UpgradeList.Add(3);
+            UpgradeList.Add(5);
+        }
+        
         //UpgradeList.Add(4);
         if (!isDoubleBullet && currentTurretForm < 2)
         {
@@ -291,14 +311,17 @@ public class playerLevel : MonoBehaviour
 
        
         Time.timeScale = 1;
+        FindObjectOfType<LoadCharacter>().GetComponent<AudioSource>().pitch = 1f;
         
         closeMenu();
     }
 
     void changePlane(int lvl)
     {
-        if (lvl == 3)
+        if (lvl == 5)
         {
+            GetComponent<PlayerStats>().updatePlayerDamage(3);
+            GetComponent<PlayerStats>().updatePlayerHp();
             if (selectedCharacter == 0)
             {
                 sr.sprite = redSkins[0];
@@ -312,8 +335,10 @@ public class playerLevel : MonoBehaviour
                 sr.sprite = yellowSkins[0];
             }
         }
-        else if (lvl == 6)
+        else if (lvl == 10)
         {
+            GetComponent<PlayerStats>().updatePlayerDamage(3);
+            GetComponent<PlayerStats>().updatePlayerHp();
             if (selectedCharacter == 0)
             {
                 sr.sprite = redSkins[1];  
