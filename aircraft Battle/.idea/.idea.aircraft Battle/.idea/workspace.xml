@@ -11,7 +11,6 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/MusicController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LoadCharacter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/gameOver.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -95,7 +94,10 @@
       <workItem from="1660379527975" duration="8826000" />
       <workItem from="1660544059045" duration="4505000" />
       <workItem from="1660907372573" duration="86000" />
-      <workItem from="1660907477220" duration="2975000" />
+      <workItem from="1660907477220" duration="2978000" />
+      <workItem from="1660927936757" duration="103000" />
+      <workItem from="1660928085938" duration="1000" />
+      <workItem from="1660928283177" duration="647000" />
     </task>
     <servers />
   </component>
@@ -128,19 +130,6 @@
           <line>338</line>
           <properties documentPath="C:\Users\yazgu\Documents\GitHub\aircraft-battle\aircraft Battle\Assets\Scripts\playerLevel.cs" initialLine="337" containingFunctionPresentation="method 'changePlane'" />
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/SoundController.cs</url>
-          <line>49</line>
-          <properties documentPath="C:\Users\Ufuk\Documents\GitHub\aircraft-battle\aircraft Battle\Assets\SoundController.cs" initialLine="24" containingFunctionPresentation="method 'OnButtonPress'">
-            <startOffsets>
-              <option value="1036" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1036" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
