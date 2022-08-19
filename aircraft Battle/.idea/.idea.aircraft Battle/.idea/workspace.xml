@@ -11,6 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/PlaySoundOnStart.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LoadCharacter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/gameOver.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -98,6 +99,11 @@
       <workItem from="1660927936757" duration="103000" />
       <workItem from="1660928085938" duration="1000" />
       <workItem from="1660928283177" duration="647000" />
+      <workItem from="1660942088028" duration="1350000" />
+      <workItem from="1660946899081" duration="17000" />
+      <workItem from="1660946977727" duration="171000" />
+      <workItem from="1660947163863" duration="368000" />
+      <workItem from="1660948380131" duration="776000" />
     </task>
     <servers />
   </component>
