@@ -4,24 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="081245cc-4189-4442-ac51-43462a872342" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.aircraft Battle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.aircraft Battle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnemyConfigs/enemy_0.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EnemyConfigs/enemy_0.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/updatev3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/updatev3.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyConfigCreatorCode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyConfigCreatorCode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyStats.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerStats.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/enemySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/enemySpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/playerLevel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/playerLevel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
-    </list>
+    <list default="true" id="081245cc-4189-4442-ac51-43462a872342" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/MusicController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LoadCharacter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/gameOver.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -47,6 +37,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;rider.run.widget.enabled.cache&quot;: &quot;false&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -103,6 +94,8 @@
       <workItem from="1659954935950" duration="1165000" />
       <workItem from="1660379527975" duration="8826000" />
       <workItem from="1660544059045" duration="4505000" />
+      <workItem from="1660907372573" duration="86000" />
+      <workItem from="1660907477220" duration="2975000" />
     </task>
     <servers />
   </component>
@@ -133,15 +126,21 @@
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/playerLevel.cs</url>
           <line>338</line>
-          <properties documentPath="C:\Users\yazgu\Documents\GitHub\aircraft-battle\aircraft Battle\Assets\Scripts\playerLevel.cs" initialLine="337" containingFunctionPresentation="method 'changePlane'">
+          <properties documentPath="C:\Users\yazgu\Documents\GitHub\aircraft-battle\aircraft Battle\Assets\Scripts\playerLevel.cs" initialLine="337" containingFunctionPresentation="method 'changePlane'" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/SoundController.cs</url>
+          <line>49</line>
+          <properties documentPath="C:\Users\Ufuk\Documents\GitHub\aircraft-battle\aircraft Battle\Assets\SoundController.cs" initialLine="24" containingFunctionPresentation="method 'OnButtonPress'">
             <startOffsets>
-              <option value="10171" />
+              <option value="1036" />
             </startOffsets>
             <endOffsets>
-              <option value="10172" />
+              <option value="1036" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="1" />
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
