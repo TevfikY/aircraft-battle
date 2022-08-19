@@ -112,11 +112,18 @@ public class PlayerStats : MonoBehaviour
     {
         playerHP += hp;
         if (playerHP > maxHP) playerHP = maxHP;
+        playerGetHit(0);
     }
 
     public void updatePlayerDamage(float damage)
     {
         playerDamage += damage;
+    }
+
+    public void updatePlayerHp()
+    {
+        maxHP += 5;
+        playerHP += 5;
     }
 
     public float getDamage()
@@ -127,10 +134,17 @@ public class PlayerStats : MonoBehaviour
     public void increaseMaxHP()
     {
         maxHP += maxHPincreasingAmount;
+        playerHP += 6;
+        playerGetHit(0);
     }
 
     public void setBarrierOn()
     {
         isBarrierOn = true;
+    }
+
+    public bool checkIsBarrierOn()
+    {
+        return isBarrierOn;
     }
 }

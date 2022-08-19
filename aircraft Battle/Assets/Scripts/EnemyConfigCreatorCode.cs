@@ -29,5 +29,15 @@ public class EnemyConfigCreatorCode : ScriptableObject
     {
         return enemyEXP;
     }
+
+    public void increaseHP()
+    {
+        enemyHP += 3;
+    }
+
+    public void increaseDMG()
+    {
+        enemyDamage += 1;
+    }
     
 }

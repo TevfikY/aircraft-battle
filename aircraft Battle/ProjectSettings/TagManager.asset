@@ -20,8 +20,8 @@ TagManager:
   - EnemyBullet
   - turret
   - barrier
-  - 
-  - 
+  - blur
+  - buttons
   - 
   - 
   - 
@@ -44,6 +44,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: buttons
+    uniqueID: 2254326191
+    locked: 0
   - name: tiles
     uniqueID: 1947524477
     locked: 0
@@ -58,4 +61,7 @@ TagManager:
     locked: 0
   - name: barrier
     uniqueID: 2430970897
+    locked: 0
+  - name: blur
+    uniqueID: 1038865137
     locked: 0
