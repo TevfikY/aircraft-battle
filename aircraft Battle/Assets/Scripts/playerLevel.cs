@@ -220,7 +220,7 @@ public class playerLevel : MonoBehaviour
         //UpgradeList.Add(2);
         UpgradeList.Add(3);
         */
-        Debug.Log(GetComponent<PlayerStats>().checkIsBarrierOn());
+        
         if (GetComponent<PlayerStats>().checkIsBarrierOn())
         {
             UpgradeList.Add(0);

@@ -18,7 +18,7 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
-        audio.pitch = 1f;
+        
     }
 
     public void Home(int sceneID)
