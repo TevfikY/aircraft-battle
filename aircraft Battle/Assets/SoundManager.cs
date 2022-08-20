@@ -7,21 +7,25 @@ using UnityEngine.UI;
 
 public class SoundManager : MonoBehaviour
 {
+
     public static SoundManager Instance;
 
+    private bool isMuted;
+
     [SerializeField] private AudioSource musicSource, effectSource;
+    
 
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-           //DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(effectSource);
         }
 
         else
         {
-            Destroy(gameObject);
+            Destroy(musicSource);
         }
     }
 
@@ -34,6 +38,7 @@ public class SoundManager : MonoBehaviour
     {
         effectSource.mute = !effectSource.mute;
     }
+    
     
     public void ToggleMusic()
     {
