@@ -69,7 +69,7 @@ public class PlayerStats : MonoBehaviour
         {
             if (barrierHP - damage > 0)
             {
-                Debug.Log("barrier damage "+barrierHP );
+                
                 barrierHP -= damage;
             }
             else

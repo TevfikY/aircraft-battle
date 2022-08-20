@@ -7,6 +7,24 @@
     <list default="true" id="081245cc-4189-4442-ac51-43462a872342" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.aircraft Battle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.aircraft Battle/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/updatev3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/updatev3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerStats.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/enemySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/enemySpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/kamikazeEnemey.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/kamikazeEnemey.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/playerLevel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/playerLevel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/playerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/playerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/crosshairs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/crosshairs/crosshairs_tilesheet_white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/crosshairs/crosshairs_tilesheet_white.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/sprites/dusmant10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/sprites/dusmant10.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/sprites/dusmant6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/sprites/dusmant6.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/sprites/dusmany10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/sprites/dusmany10.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/sprites/dusmany6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/sprites/dusmany6.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/toggleMusicButtonImage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/toggleMusicButtonImage.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +125,7 @@
       <workItem from="1660947163863" duration="368000" />
       <workItem from="1660948380131" duration="776000" />
       <workItem from="1660989776648" duration="8975000" />
-      <workItem from="1661015400448" duration="640000" />
+      <workItem from="1661015400448" duration="1350000" />
     </task>
     <servers />
   </component>

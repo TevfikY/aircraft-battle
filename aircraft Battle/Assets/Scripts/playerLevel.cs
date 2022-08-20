@@ -77,7 +77,7 @@ public class playerLevel : MonoBehaviour
             maxExp += 25;
             if (playerLvl % 3 == 0)
             {
-                Debug.Log("working");
+                
                 openSpecialUpgradeMenu();
             }
             else
@@ -120,7 +120,7 @@ public class playerLevel : MonoBehaviour
         upgradeMenu.SetActive(true);
         FindObjectOfType<buttonFinder>().gameObject.GetComponent<Image>().enabled = false;
         Time.timeScale = 0;
-        Debug.Log(SpecialUpgradeList.Count);
+        
         firstUpgrade = SpecialUpgradeList[Random.Range(0, SpecialUpgradeList.Count)];
         SpecialUpgradeList.Remove(firstUpgrade);
 

@@ -168,7 +168,7 @@ public class enemySpawner : MonoBehaviour
            {
                
                    ++phaze;
-               Debug.Log("PHAZZE "+phaze);
+               
                
                if (phaze == 4) phaze = 0;
                StartCoroutine(spawn());

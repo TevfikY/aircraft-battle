@@ -31,12 +31,12 @@ public class toggleMusicButtonImage : MonoBehaviour
         if (PlayerPrefs.GetInt("isMusicMuted") == 0)
         {
             targetButton.sprite = buttonSprites[0];
-            Debug.Log(0);
+            
         }
         else
         {
             targetButton.sprite = buttonSprites[1];
-            Debug.Log(1);
+            
         }
     }
 }

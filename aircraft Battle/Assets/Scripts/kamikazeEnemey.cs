@@ -29,7 +29,7 @@ public class kamikazeEnemey : MonoBehaviour
     {
         if (col.gameObject.tag == "Player")
         {
-            Debug.Log("colllll");
+            
             col.gameObject.GetComponent<PlayerStats>().playerGetHit(enemyDamage);
             _enemyStats.hitEnemy(100f);
             GetComponent<BoxCollider2D>().enabled = false;

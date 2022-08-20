@@ -39,7 +39,7 @@ public class playerMovement : MonoBehaviour
             if (Input.GetMouseButton(0))
             {
                 Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                //Debug.Log(mousePos);
+                
                 if (mousePos.y < 1)
                 {
                     transform.position = Vector2.MoveTowards(transform.position,new Vector2(mousePos.x,transform.position.y), speed); 
