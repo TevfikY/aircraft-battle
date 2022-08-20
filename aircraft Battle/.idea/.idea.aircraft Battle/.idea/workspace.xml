@@ -4,14 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="081245cc-4189-4442-ac51-43462a872342" name="Changes" comment="" />
+    <list default="true" id="081245cc-4189-4442-ac51-43462a872342" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Bar 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Bar 1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/icons.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/icons/Damage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/icons/Damage.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/icons/DoubleBullet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/icons/DoubleBullet.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/icons/DoubleNozzle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/icons/DoubleNozzle.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/icons/HP.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/icons/HP.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/icons/MaxHP.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/icons/MaxHP.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/icons/Shield.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/icons/Shield.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/icons/TripleNozzle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/icons/TripleNozzle.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.aircraft Battle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.aircraft Battle/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/updatev3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/updatev3.unity" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/PlaySoundOnStart.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LoadCharacter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/gameOver.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -26,21 +45,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;rider.run.widget.enabled.cache&quot;: &quot;false&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Discover.Launch.Via.Unity": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/../../../demo3\aircraft Battle.exe" />
@@ -104,6 +122,7 @@
       <workItem from="1660946977727" duration="171000" />
       <workItem from="1660947163863" duration="368000" />
       <workItem from="1660948380131" duration="776000" />
+      <workItem from="1660989776648" duration="604000" />
     </task>
     <servers />
   </component>
