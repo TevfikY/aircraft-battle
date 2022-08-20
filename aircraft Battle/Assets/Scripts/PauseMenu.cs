@@ -7,15 +7,18 @@ public class PauseMenu : MonoBehaviour
 
 {
     [SerializeField] GameObject pauseMenu;
+    [SerializeField] private AudioSource audio;
     public void Pause()
     {
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
+        audio.pitch = 0.59f;
     }
     public void Resume()
     {
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
+        audio.pitch = 1f;
     }
 
     public void Home(int sceneID)

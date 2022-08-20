@@ -74,6 +74,7 @@ public class playerLevel : MonoBehaviour
             playerLvl++;
             
             playerCurrentExp -= maxExp;
+            maxExp += 25;
             if (playerLvl % 3 == 0)
             {
                 Debug.Log("working");
@@ -115,6 +116,7 @@ public class playerLevel : MonoBehaviour
 
     void openSpecialUpgradeMenu()
     {
+        audio.pitch = 0.59f;
         upgradeMenu.SetActive(true);
         FindObjectOfType<buttonFinder>().gameObject.GetComponent<Image>().enabled = false;
         Time.timeScale = 0;
