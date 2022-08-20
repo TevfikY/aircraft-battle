@@ -11,14 +11,14 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private Button pauseButton;
     [SerializeField] private float playerHP;
     [SerializeField] private float playerDamage;
-    [SerializeField] private Image firstHeart;
-    [SerializeField] private Image secondHeart;
-    [SerializeField] private Image thirdHeart;
+    
     [SerializeField] private float maxHPincreasingAmount = 6;
     private static bool isBarrierOn = false;
     private static float barrierHP = 3;
     [SerializeField] private TextMeshProUGUI currentScore;
     [SerializeField] private TextMeshProUGUI bestScore;
+    [SerializeField] private Image hpBar;
+    
     
     private float maxHP;
     void Start()
@@ -39,6 +39,7 @@ public class PlayerStats : MonoBehaviour
         {
             int dmf;
             playerHP = playerHP - damage;
+            hpBar.fillAmount = playerHP / maxHP;
             if (playerHP <= 0)
             {
                 
@@ -62,30 +63,7 @@ public class PlayerStats : MonoBehaviour
                 gameOver.SetActive(true);
                 pauseButton.enabled = false;
             }
-            if (playerHP / maxHP > (8/12f))
-            {
-                firstHeart.enabled = true;
-                secondHeart.enabled = true;
-                thirdHeart.enabled = true;
-            }
-            else if (playerHP / maxHP > (4/12f))
-            {
-                firstHeart.enabled = true;
-                secondHeart.enabled = true;
-                thirdHeart.enabled = false;
-            }
-            else if (playerHP / maxHP > (1 / 12f))
-            {
-                firstHeart.enabled = true;
-                secondHeart.enabled = false;
-                thirdHeart.enabled = false;
-            }
-            else if (playerHP<=0)
-            {
-                firstHeart.enabled = false;
-                secondHeart.enabled = false;
-                thirdHeart.enabled = false;
-            }
+           
         }
         else if (isBarrierOn)
         {

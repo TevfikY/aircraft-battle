@@ -5,25 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="081245cc-4189-4442-ac51-43462a872342" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Bar 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Bar 1.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/icons.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/icons/Damage.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/icons/Damage.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/icons/DoubleBullet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/icons/DoubleBullet.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/icons/DoubleNozzle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/icons/DoubleNozzle.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/icons/HP.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/icons/HP.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/icons/MaxHP.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/icons/MaxHP.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/icons/Shield.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/icons/Shield.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/icons/TripleNozzle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/icons/TripleNozzle.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Effects Source.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Effects Source.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Bar (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Bar (1).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/BarFrame.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/BarFrame.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/HPBarFrame.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/HPBarFrame.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/LevelUp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/LevelUp.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/XPBar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/XPBar.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/XPBarFrame.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/XPBarFrame.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.aircraft Battle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.aircraft Battle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/updatev3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/updatev3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayerAssets/PlayerHP.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerAssets/PlayerHP.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayerAssets/XP Bar 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerAssets/XP Bar 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SoundController.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SoundController.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyConfigCreatorCode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyConfigCreatorCode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerStats.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/playerLevel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/playerLevel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +125,7 @@
       <workItem from="1660946977727" duration="171000" />
       <workItem from="1660947163863" duration="368000" />
       <workItem from="1660948380131" duration="776000" />
-      <workItem from="1660989776648" duration="604000" />
+      <workItem from="1660989776648" duration="4125000" />
     </task>
     <servers />
   </component>
@@ -146,17 +149,5 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/playerLevel.cs</url>
-          <line>338</line>
-          <properties documentPath="C:\Users\yazgu\Documents\GitHub\aircraft-battle\aircraft Battle\Assets\Scripts\playerLevel.cs" initialLine="337" containingFunctionPresentation="method 'changePlane'" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

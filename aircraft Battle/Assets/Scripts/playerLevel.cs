@@ -11,7 +11,7 @@ public class playerLevel : MonoBehaviour
     private float maxExp = 100;
     [SerializeField] Image expBar;
     private int playerLvl = 1;
-    [SerializeField] private Text lvlText;
+    
     [SerializeField] GameObject upgradeMenu;
     private List<int> UpgradeList = new List<int>(); 
     private List<int> SpecialUpgradeList = new List<int>();
@@ -50,7 +50,7 @@ public class playerLevel : MonoBehaviour
     void Start()
     {
         expBar.fillAmount = playerCurrentExp / maxExp;
-        lvlText.text = playerLvl.ToString();
+        
         upgradeMenu.SetActive(false);
         updateUpgradeList();
         selectedCharacter = PlayerPrefs.GetInt("selectedCharacter");
@@ -72,7 +72,7 @@ public class playerLevel : MonoBehaviour
         {
             
             playerLvl++;
-            lvlText.text = playerLvl.ToString();
+            
             playerCurrentExp -= maxExp;
             if (playerLvl % 3 == 0)
             {

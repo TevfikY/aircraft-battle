@@ -32,7 +32,7 @@ public class EnemyConfigCreatorCode : ScriptableObject
 
     public void increaseHP()
     {
-        enemyHP += 3;
+        enemyHP += 6;
     }
 
     public void increaseDMG()
