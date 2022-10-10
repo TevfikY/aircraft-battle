@@ -5,27 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="081245cc-4189-4442-ac51-43462a872342" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/crosshairs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/crosshairs/crosshairs_tilesheet_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/crosshairs/crosshairs_tilesheet_white.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.aircraft Battle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.aircraft Battle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/updatev3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/updatev3.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerStats.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/enemySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/enemySpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/kamikazeEnemey.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/kamikazeEnemey.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/playerLevel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/playerLevel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/playerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/playerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/crosshairs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/crosshairs/crosshairs_tilesheet_white.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/crosshairs/crosshairs_tilesheet_white.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/sprites/dusmant10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/sprites/dusmant10.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/sprites/dusmant6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/sprites/dusmant6.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/sprites/dusmany10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/sprites/dusmany10.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/sprites/dusmany6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/sprites/dusmany6.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/toggleMusicButtonImage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/toggleMusicButtonImage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayerAssets/barrier.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerAssets/barrier.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,6 +112,11 @@
       <workItem from="1660948380131" duration="776000" />
       <workItem from="1660989776648" duration="8975000" />
       <workItem from="1661015400448" duration="1350000" />
+      <workItem from="1661070101183" duration="608000" />
+      <workItem from="1661082495924" duration="213000" />
+      <workItem from="1661083372291" duration="17000" />
+      <workItem from="1661083422345" duration="192000" />
+      <workItem from="1661709254334" duration="700000" />
     </task>
     <servers />
   </component>
